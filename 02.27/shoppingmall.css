@@ -1,0 +1,35 @@
+*{margin:0; padding:0;}
+a{text-decoration: none; color:#000;}
+ul{list-style: none;}
+.box1,.box2,.box4,.box5,.box6,.box7,.box8{
+    width:1000px;
+    margin:0 auto;
+}
+i{
+    color:#544848;
+    font-size: 25px;
+    vertical-align: middle;
+}
+.box1 span{
+    display: none;
+}
+.bookmark, .logo, .join{
+    float: left;
+    width:33%;
+}
+.box1:after{
+    clear: both;
+    display: block;
+    content:'';
+}
+.bookmark li{
+    float: left;
+    width:100px;
+    height: 100px;
+    text-align: center;
+}
+.bookmark li a{
+    display: block;
+    height: 100px;
+    
+}

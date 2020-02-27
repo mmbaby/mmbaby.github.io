@@ -1,0 +1,388 @@
+*{margin:0; padding:0;}
+a{text-decoration: none; color:#000;}
+ul{list-style: none;}
+
+body{
+    font-family: 'Yeon Sung', sans-serif;
+    height: 1270px;
+    
+}
+.box1,.box2,.box3,.box4_inner{
+    width:1000px;
+    margin:0 auto;
+}
+
+.box1{height:200px;}
+.box2{height:370px;}
+.box3{height:600px;}
+.box4{height:100px;}
+
+.logo{
+    float: left;
+    width: 40%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.logo img{
+    vertical-align: bottom;
+}
+.menu{
+    float: right;
+    height: 30%;
+}
+.nav{
+    float: right;
+    height: 70%;
+    
+}
+.box1:after{
+    clear: both;
+    display: block;
+    content:'';
+}
+/*menu*/
+.menu_info li a{
+    text-align: center;
+    display: inline-block;
+    padding:10px 0px;
+    color:#6e5c4e;
+    
+}
+.menu_info li a:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
+.menu_info li{
+    float: left;
+    width:auto;
+}
+.menu_info .after:after{
+    content: '|';
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*nav*/
+.nav_info{
+    position: relative;
+    transition:all 0.4s;
+}
+.nav_info>li{
+    float: left;
+    width:180px;
+}
+.nav_info>li>a{
+    display: block;
+    padding:5px 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.nav_info>li>a:hover{
+    background-color: #cb6950;
+    color:#fff;
+    opacity: 0.8;
+}
+/*sub_info*/
+.sub_info{
+    display: none;
+    margin-top:10px;
+    position: absolute;
+    z-index: 1;
+}
+.sub_info>li{
+    transition:all 0.4s;
+    background-color: rgba(255,255,255,0.6); 
+    width:180px;
+}
+.sub_info>li>a{
+    display: block;
+    padding:10px 10px;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.8;
+}
+.sub_info>li>a:hover{
+    background-color: #836e5e;
+    color:#fff;
+    
+}
+/*panel*/
+.panel{
+    width:1000px;
+    height: 370px;
+    overflow: hidden;
+    position: relative;
+}
+.imges{
+    width:6000px;
+    height: 370px;
+    margin:0;
+    padding:0;
+}
+.imges img{
+    float: left;
+    width:1000px;
+    height: 370px;
+    vertical-align: bottom;
+}
+.box2:after{
+    clear: both;
+    display: block;
+    content:'';
+}
+/*btn*/
+.btn{
+    position: absolute;
+    bottom: 0;
+    left: 395px;
+    width:210px;
+}
+.btn button{
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    width:100px;
+    height: 30px;
+    background-color: rgba(255,255,255,0);
+    
+}
+.btn span,i{
+    color:#fff;
+    font-size: 15px;
+    padding: 5px;
+    font-family: 'Yeon Sung', sans-serif;
+}
+.btn button:hover{
+    opacity: 0.8;
+}
+
+/*box3*/
+.box3:after{
+    clear: both;
+    content:'';
+    display: block;
+}
+.box3_1{
+    float: left;
+    width:50%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.box3_2{
+    float: right;
+    width:50%;
+}
+.notice{
+    height: 60%;
+    text-align: center;
+}
+.partner{
+    height: 40%;
+}
+.notice h3{
+    font-size: 20px;
+    color:#406066;
+    padding-bottom: 10px;
+    margin-top:20px;
+    border-bottom: solid 1px #689098;
+    
+}
+.more span{
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    color:#9a9e9c;
+    font-size: 18px;
+    
+}
+.more span i{
+    font-size: 18px;
+    color:#9a9e9c;
+    vertical-align: middle;
+}
+.notice table{
+    margin:0 auto;
+    border-collapse: collapse;
+    width:450px;
+}
+.notice table thead th{
+    color:#689098;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+.notice table tbody td{
+    padding:5px;
+    font-size: 16px;
+}
+.notice table tr{
+    cursor: pointer;
+    border-bottom: dotted 0.5px #b1746f;    
+}
+.notice tbody tr:hover{
+    background-color: #fad3c2;
+}
+.notice:after{
+    clear: both;
+    display: block;
+    content:'';
+}
+/*partner*/
+.partner{
+    margin-top:30px;
+    text-align: center;
+}
+.partner h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color:#406066;
+}
+.partner img{
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/*partner_info*/
+.partner_info{
+    display:none;
+    width:100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+}
+.partner_info.on{
+    display: block;
+}
+.partner_info .wrap{
+    position: fixed;
+    left: 50%;
+    top:50%;
+    text-align: center;
+    width:400px;
+    height: 500px;
+    transform: translate(-50%,-50%);
+    background: #fff;
+}
+.list img{
+    vertical-align: bottom;
+    padding:20px;
+}
+.wrap button{
+    position: absolute;
+    bottom: 0;
+    border: none;
+    right: 0;   
+}
+/*event*/
+.icon{
+    height: 32%;
+    box-sizing: border-box;
+    border-bottom: solid 0.5px #eeeeee;
+}
+.first img{
+    padding: 20px 50px;
+    height:105px;
+    vertical-align: middle;
+    }
+.first p{
+    color:#8f6849;
+    font-size: 30px;
+    text-align: right;
+    cursor: pointer;   
+}
+.second table{
+    text-align: center;
+    margin:0 auto; 
+}
+.second td,i{
+    font-size: 15px;
+    color:#a2a2a4;
+}
+.second i{
+    display: block;
+}
+.second td{
+    cursor: pointer;
+    width:100px;
+    height: 100px;
+}
+.second td:hover{
+    background-color: #eeeeee;
+    color:#faa097;
+}
+.third img{
+    border-radius: 10px;
+    vertical-align: bottom;
+}
+.third{
+    border-bottom: none;
+}
+.box4{
+    border-top:solid 1px #dddddd;
+    box-sizing: border-box;
+}
+.copyright{
+    float: left;
+    width:60%;
+    margin-top:20px;
+}
+.address{
+    float: right;
+    width:40%;
+}
+.box4:after{
+    clear: both;
+    content:'';
+    display: block;
+}
+.copy_info li{
+    float: left;
+    width:32%;
+    text-align: center;
+}
+.copy_info li a{
+    display: inline-block;
+}
+.copy_info li a:hover{
+    opacity: 0.8;
+}
+.address{
+    box-sizing: border-box;
+    height: 100px;
+    text-align: center;
+}
+.address p{
+    font-size: 13px;
+}
+.quick{
+    position: absolute;
+    width:50px;
+    height:120px;
+    right: 0;
+    top:300px;
+}
+.quick .fa-chevron-circle-up{
+    padding:0;
+    vertical-align: middle;
+}
+.quick li a{
+    display: block;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+}
+.quick li a:hover{
+    opacity: 0.8;
+}
+.quick li{
+   border: solid 1px #dddddd;
+}
+.quick li:first-child{
+    border-radius: 5px 5px 0 0;
+}
+.quick li:last-child{
+    border-radius: 0 0 5px 5px;
+}
