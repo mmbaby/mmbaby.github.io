@@ -10,14 +10,23 @@ ul{list-style: none;}
     margin:0 auto;
 }
 .box1{height: 230px;}
-i{
+.box1 i{
     color:#544848;
     font-size: 25px;
     width:30px;
     height: 30px;
+    display: block;
 }
 .box1 span{
+    font-size: 14px;
     display: none;
+    color:#796163;
+}
+.box1 i.off{
+    display: none;
+}
+.box1 span.on{
+    display: block;
 }
 .box1_1, .logo, .box1_2{
     float: left;
@@ -44,9 +53,6 @@ i{
     display: inline-block;
     padding:35px;   
 }
-.bookmark li a:hover{
-    display: none;
-}
 .box1_2{
     height: 230px;
     text-align: center;
@@ -63,8 +69,8 @@ i{
     display: inline-block;
     padding:35px;  
 }
-.join li a:hover{
-    display: none;
+.join small{
+    color:#fea89b;
 }
 .box2{
     width:100vw;
@@ -151,14 +157,18 @@ i{
     width:800px;
     height: 500px;
     margin: 0 auto;
-    overflow: hidden;
     margin-top:50px;
+    overflow: hidden;
 }
 .img_slide{
     width:4000px;
 }
 .img_slide li{
     float: left;
+    display: none;
+}
+.img_slide li.active{
+    display: block;
 }
 .img_slide img{
     width:800px;
@@ -174,12 +184,13 @@ i{
     width:90px;
     height: 13px;
     overflow: hidden;
+    cursor: pointer;
 }
 .btn li{
     float: left;
     padding:0 3px;
 }
-.btn li a:hover{
+.btn li:hover{
     opacity: 0.8;
 }
 .btn li:nth-child(2){
@@ -286,4 +297,87 @@ i{
 }
 .box8{
     border-top:solid 1px #dddddd;
+    background-color: #eeeeee;
+}
+.box8_1{
+    height: 100px;
+    border-bottom: solid 1px #d5cbcc;
+}
+.call{
+    float: left;
+}
+.time{
+    float: left;
+}
+.ask{
+    float: left;
+}
+.box8_1:after{
+    clear: both;
+    display: block;
+    content:'';
+}
+.call i{
+    color: #f15b67;
+    font-size: 30px;
+    padding-left: 20px;
+    
+    
+}
+.call h1{
+    color:#796163;
+    padding:0;
+    
+}
+.call{
+    width:25%;
+    height: 50px;
+    margin-top:25px;
+    
+}
+.time p{
+    color:#796163;
+    font-size: 12px;
+}
+.time{
+    width:25%;
+    height: 50px;
+    text-align: center;
+    
+    margin-top:25px;
+    
+}
+.ask{
+    width:25%;
+    height: 50px;
+    text-align: center;
+    margin-top:25px;
+    
+}
+.ask button{
+    cursor: pointer;
+    border:solid 1px #dddddd;
+    background-color: rgba(255,255,255,1);
+    padding:10px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.copyright{
+    margin-top:10px;
+    margin-left: 20px;
+}
+.copyright ul{
+    float: left;
+    width:25%;
+}
+.copyright li a,.copyright p{
+    font-size: 12px;
+    color:#796163;
+}
+.copyright li a:hover{
+    text-decoration: underline;
+}
+.copyright h5{
+    margin-bottom: 5px;
+    color:#796163;
 }
