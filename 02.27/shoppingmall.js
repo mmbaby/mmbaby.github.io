@@ -105,10 +105,10 @@ $(function () {
     var i = 0;
     var count = contentsSlide.length; //5
     function moveLeft() {
-        $('.contents').append($('.contents>li[dataindex=' + i + ']'));
-        i = (i+1) % 5;
+        $('.contents').append($('.contents>li[data-index=' + i + ']'));
+        console.log(i);
+        i = (i + 1) % 5;
     }
 
 
 });
-
