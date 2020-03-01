@@ -106,7 +106,7 @@ $(function () {
     var count = contentsSlide.length; //5
     function moveLeft() {
         $('.contents').append($('.contents>li[data-index=' + i + ']'));
-        console.log(i);
+//        console.log(i);
         i = (i + 1) % 5;
     }
 
