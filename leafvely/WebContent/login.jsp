@@ -167,6 +167,7 @@
 	<div class='loginlogo'>
 		<img src="img/loginlogo.png" alt=''>
 	</div>
+	
 	<div class='logininput'>
 		<h2>ID</h2>
 		<input type="text"><br>
