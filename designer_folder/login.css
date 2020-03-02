@@ -61,6 +61,7 @@ input[type=checkbox]:checked+label:before{
     border: none;
     cursor: pointer;
     background-color: rgba(0,0,0,1);
+    outline: 0;
 }
 .login_btn button:hover{
     opacity: 0.8;

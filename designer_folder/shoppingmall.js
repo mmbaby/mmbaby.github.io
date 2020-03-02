@@ -6,6 +6,10 @@ $(function () {
         } else {
             $('.box3').stop().removeClass('fixed');
         }
+        var currentPosition = $('.quick').css('top'); //300
+        $('.quick').stop().animate({
+            'top':currentPosition+documentPosition+'px'
+        },500)
 
     });
 
@@ -106,9 +110,16 @@ $(function () {
     var count = contentsSlide.length; //5
     function moveLeft() {
         $('.contents').append($('.contents>li[data-index=' + i + ']'));
-//        console.log(i);
+        //        console.log(i);
         i = (i + 1) % 5;
     }
+
+
+
+
+
+
+
 
 
 });

@@ -2,6 +2,142 @@
     width:800px;
     margin:0 auto;
 }
+
 .certification{
+    margin-top:20px; 
+}
+.certification input[type=radio]{
+    display: none;
+}
+.certification input[type=radio] + label{
+    font-size: 13px;
+    width:100px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;  
+}
+.certification input[type=radio] + label:before{
+    display: inline-block;
+    width:15px;
+    height: 15px;
+    background-color: #fea89b;
+    content:'';
+    margin-right: 5px;
+    vertical-align: bottom;
+    border-radius: 2px;
+}
+.certification input[type=radio]:checked + label:before{
+    content:'\2713';
+    color: #fff;
+}
+.certification button{
+    background-color: rgba(255,255,255,1);
+    padding:5px 10px;
+    margin-left: 130px;
+    margin-top:10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 2px;
+    border:solid 1px #dddddd;
+    outline: 0;
     
+}
+.certification button:hover{
+    border:solid 1px #ab8e7c;
+    
+}
+.certification p{
+    font-size: 12px;
+    margin-top:5px;
+    margin-left: 10px;
+}
+.boxA{
+    height: 100px;
+}
+.information{
+    margin-top:50px;
+}
+.information, .addinfomation{
+    font-size: 12px;
+}
+.information p, .addinfomation p{
+    font-size: 13px;
+    text-align: right;
+}
+.information table{
+    margin-top:15px;
+    padding-top:15px;
+    border-top:solid 1px #dddddd;
+}
+.information span{
+    color:red;
+}
+.information td{
+    padding: 5px 10px;
+}
+input[class='smalltext']{
+    width:50px;
+}
+input[class='normaltext']{
+    width:90px;
+}
+.information option{
+    font-size: 12px;
+}
+.boxB{
+    height: 550px;
+}
+.addinfomation table{
+    margin-top:15px;
+    padding-top:15px;
+    border-top:solid 1px #dddddd;
+}
+.addinfomation td{
+    padding: 5px 10px;
+}
+.boxC{
+    height: 150px;
+}
+.noresize{
+    resize:none;
+    width:800px;
+    height: 150px;
+    font-size: 13px;
+    margin-top:20px;
+}
+.agree_check{
+    font-size: 13px;
+    margin:10px;
+}
+.boxD{
+    height: 450px;
+}
+.confirm h5{
+    text-align: right;
+    font-size: 12px;
+}
+.confirm{
+    text-align: center;
+}
+.confirm button{
+    margin:20px 10px;
+    padding:10px;
+    display: inline-block;
+    border: solid 1px #ab8e7c;
+    background-color: #eeeeee;
+    cursor: pointer;
+    border-radius: 2px;
+    outline: 0;
+    
+}
+.confirm button:hover{
+    opacity: 0.8;
+}
+.confirm button span{
+    font-size: 12px;
+    font-weight: bold;
+}
+.boxE{
+    height: 110px;
+    margin-bottom: 200px;
 }

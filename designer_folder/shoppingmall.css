@@ -359,6 +359,7 @@ ul{list-style: none;}
     padding:10px;
     font-weight: 500;
     margin-left: 10px;
+    outline: 0;
 }
 .copyright{
     margin-top:10px;
@@ -386,5 +387,28 @@ ul{list-style: none;}
 	line-height:65px;
 	box-sizing: border-box;
 }
-
-
+.quick{
+    position:absolute;
+    z-index: 10;
+    top:300px;
+    right: 0;
+    width:50px;
+    height: 95px;
+}
+.quick a:hover{
+    opacity: 0.8;
+}
+.quick a{
+    display: block;
+    border:none;
+    margin:5px;
+    text-align: center;
+    width:40px;
+    height: 40px;
+}
+.quick i{
+    font-size: 20px;
+    padding:8px;
+    background-color: #eeeeee;
+    border-radius:50%;
+}
