@@ -70,6 +70,7 @@ a{text-decoration: none;}
     display: block;   
 }
 .price{
+    position:relative;
     margin-top:20px;
     border-top: solid 1px #dddddd;
 }
@@ -88,4 +89,32 @@ a{text-decoration: none;}
 }
 .price span{
     text-decoration:line-through;
+}
+.fa-facebook-square{
+    font-size: 28px;
+    color: #3b5998;
+}
+.fa-twitter-square{
+    font-size: 28px;
+    color: #1da1f2;
+}
+.price input[type=button]{
+    padding: 5px 8px;
+    border:solid 1px #eeeeee;
+    cursor: pointer;
+    font-size: 12px;
+}
+.price input[type=button]:hover{
+    opacity: 0.8;
+}
+.card_info{
+    display: none;
+    position:absolute;
+}
+.buy input[type=text]{
+    visibility: hidden;
+}
+.buy input[value]{
+    
+    
 }

@@ -7,7 +7,7 @@ $(function(){
         
     
     //우편주소 찾기
-    $('#execDaumPostcode').click(function(){
+    $('#sample6_execDaumPostcode').click(function(){
                 new daum.Postcode({
             oncomplete: function(data) {
                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.

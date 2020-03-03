@@ -192,7 +192,7 @@
                     </tr>
                     <tr>
                         <td>무이자할부</td>
-                        <td><input type='button' value='카드혜택안내 +'></td>
+                        <td><input type='button' id='card' value='카드 혜택안내 +'></td>
                     </tr>
                     <tr>
                         <td>SNS 공유</td>
@@ -220,6 +220,30 @@
                         </td>
                     </tr>
                 </table>
+                <div class='card_info'>
+                    <input type='button' name='button' id='notax'>
+                    <label for='notax'>무이자 할부</label>
+                    <input type='button' name='button' id='addtax'>
+                    <label for='addtax'>부분 무이자 할부</label>
+                    <ul class='notax'>
+                        <li>삼성카드<span>2~6 개월 (5만원 이상)</span></li>
+                        <li>신한카드<span>2~6 개월 (5만원 이상)</span></li>
+                        <li>KB국민카드<span>2~6 개월 (5만원 이상)</span></li>
+                        <li>현대카드<span>2~6 개월 (5만원 이상)</span></li>
+                        <li>비씨카드<span>2~6 개월 (5만원 이상)</span></li>
+                        <li>NH농협카드<span>2~6 개월 (5만원 이상)</span></li>
+                        <li>씨티카드<span>2~6 개월 (5만원 이상)</span></li>
+                        <li>하나카드<span>2~6 개월 (5만원 이상)</span></li>
+                    </ul>
+                    <ul class='addtax'>
+                        <li>삼성카드<span>10개월: 고객 1-4회차 부담(5만원 이상)<br>12개월: 고객 1-5회차 부담(5만원 이상)</span></li>
+                        <li>신한카드<span>10개월: 고객 1-3회차 부담(5만원 이상)<br>12개월: 고객 1-4회차 부담(5만원 이상)</span></li>
+                        <li>KB국민카드<span>10개월: 고객 1-4회차 부담(5만원 이상)<br>12개월: 고객 1-5회차 부담(5만원 이상)</span></li>
+                        <li>비씨카드<span>10개월: 고객 1-2회차 부담(5만원 이상)<br>12개월: 고객 1-3회차 부담(5만원 이상)</span></li>
+                        <li>NH농협카드<span>10개월: 고객 1-2회차 부담(5만원 이상)<br>12개월: 고객 1-4회차 부담(5만원 이상)</span></li>
+                        
+                    </ul>
+                </div>
             </div>
         </div>
         
@@ -232,7 +256,7 @@
                     <input type="button" value=" + " onclick="add();">
                     <input type="button" value=" - " onclick="del();"><br>
 
-                    금액 : <input type="text" name="sum" size="11" readonly>원
+                    금액 : <input type="text" name="sum" size="11" value='' readonly>원
                 </form>
             </div>
         </div>
