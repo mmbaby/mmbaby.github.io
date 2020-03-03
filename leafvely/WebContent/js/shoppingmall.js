@@ -1,16 +1,23 @@
 $(function () {
+    
     $(window).scroll(function () {
-        var documentPosition = $(document).scrollTop();
+    var documentPosition = $(document).scrollTop();
         if (documentPosition > 580) {
             $('.box3').stop().addClass('fixed');
         } else {
             $('.box3').stop().removeClass('fixed');
         }
-        var currentPosition = $('.quick').css('top'); //300
+        
         $('.quick').stop().animate({
-            'top':currentPosition+documentPosition+'px'
+            'top':300+documentPosition+'px'
         },500)
 
+    });
+   
+    $('.quick>#down').click(function(){
+        $('html, body').stop().animate({
+            'scrollTop': '2203px'
+        },500);
     });
 
     //box1
