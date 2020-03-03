@@ -167,7 +167,7 @@
 	<div class='loginlogo'>
 		<img src="img/loginlogo.png" alt=''>
 	</div>
-	
+	<form action="login" method="post">
 	<div class='logininput'>
 		<h2>ID</h2>
 		<input type="text"><br>
@@ -176,13 +176,14 @@
 			id='ing'> <label for='ing'>로그인상태유지</label>
 	</div>
 	<div class='login_btn'>
-		<a href="join.jsp"><button id='join'>
+		<a href="join.jsp"><button id='join' type="button">
 				<span>회원가입</span>
 			</button></a>
 		<button id='login'>
 			<span>로그인</span>
 		</button>
 	</div>
+	</form>
 
 
 

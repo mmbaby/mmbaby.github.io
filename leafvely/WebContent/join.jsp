@@ -170,34 +170,34 @@
     <div class='boxB'>
         <div class='information'>
             <strong>기본정보 | </strong> 다음은 회원가입을 위한 <strong>필수입력</strong> 항목입니다.
-            <form>
+            <form action="join" method="post">
                 <table>
                     <tr>
                         <td>
                             <p>아이디<span>*</span></p>
                         </td>
-                        <td><input type='text'> (영문소문자/숫자,4~16자)</td>
+                        <td><input type='text' name="id"> (영문소문자/숫자,4~16자)</td>
                     </tr>
 
                     <tr>
                         <td>
                             <p>비밀번호<span>*</span></p>
                         </td>
-                        <td><input type='password'> (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</td>
+                        <td><input type='password' name="pw"> (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</td>
                     </tr>
 
                     <tr>
                         <td>
                             <p>비밀번호 확인<span>*</span></p>
                         </td>
-                        <td><input type='password'></td>
+                        <td><input type='password' name="pwCheck"></td>
                     </tr>
 
                     <tr>
                         <td>
                             <p>비밀번호 확인 질문<span>*</span></p>
                         </td>
-                        <td><select>
+                        <td><select name="pwCheckQ">
                                 <option>선택해주세요</option>
                                 <option>맆블리 처음 기념 날짜는?</option>
                                 <option>맆블리 기억에 남는 여행 장소는?</option>
@@ -213,34 +213,34 @@
                         <td>
                             <p>비밀번호 확인 답변<span>*</span></p>
                         </td>
-                        <td colspan='2'><input type='text'></td>
+                        <td colspan='2'><input type='text' name="pwCheckA"></td>
                     </tr>
 
                     <tr>
                         <td>
                             <p>이름<span>*</span></p>
                         </td>
-                        <td><input type='text' class='normaltext'></td>
+                        <td><input type='text' class='normaltext' name="userName"></td>
                     </tr>
 
                     <tr>
                         <td rowspan='3'>
                             <p>주소<span>*</span></p>
                         </td>
-                        <td><input type="text" id="sample6_postcode" class='normaltext' placeholder="우편번호"> <input type="button" id="sample6_execDaumPostcode" value="우편번호 찾기"></td>
+                        <td><input type="text" id="sample6_postcode" class='normaltext' placeholder="우편번호" name="postCode"> <input type="button" id="sample6_execDaumPostcode" value="우편번호 찾기"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="sample6_address" placeholder="주소"></td>
+                        <td><input type="text" id="sample6_address" placeholder="주소" name="address"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="sample6_detailAddress" placeholder="상세주소"> <input type="text" id="sample6_extraAddress" placeholder="참고항목"></td>
+                        <td><input type="text" id="sample6_detailAddress" placeholder="상세주소" name="addressDetail"> <input type="text" id="sample6_extraAddress" placeholder="참고항목" name="addressExtra"></td>
                     </tr>
                     <tr>
                         <td>
                             <p>휴대전화<span>*</span></p>
                         </td>
                         <td>
-                            <select>
+                            <select name="phoneN">
                                 <option>010</option>
                                 <option>011</option>
                                 <option>016</option>
@@ -248,8 +248,8 @@
                                 <option>018</option>
                                 <option>019</option>
                             </select>
-                            - <input type='text' class='smalltext'>
-                            - <input type='text' class='smalltext'>
+                            - <input type='text' class='smalltext' name="phoneN">
+                            - <input type='text' class='smalltext' name="phoneN">
                         </td>
 
                     </tr>
@@ -268,7 +268,7 @@
                         <td>
                             <p>이메일<span>*</span></p>
                         </td>
-                        <td><input type='email'></td>
+                        <td><input type='email' name="userEmail"></td>
                     </tr>
                     <tr>
                         <td rowspan='2'>
@@ -281,17 +281,15 @@
                         <td>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</td>
                     </tr>
                 </table>
-            </form>
         </div>
     </div>
     <div class='boxC'>
         <div class='addinfomation'>
             <strong>추가정보 | </strong>
             <table>
-                <form>
                     <tr>
                         <td>생년월일</td>
-                        <td><input type='text' class='smalltext'> 년 <input type='text' class='smalltext'> 월 <input type='text' class='smalltext'> 일 </td>
+                        <td><input type='text' class='smalltext' name="birthDate"> 년 <input type='text' class='smalltext' name="birthDate"> 월 <input type='text' class='smalltext' name="birthDate"> 일 </td>
                         <td><input type='radio' name='name' id='Lift'>
                            <label for='Lift'>앙력</label>
                             <input type='radio' name='name' id='Lunar'>
@@ -299,9 +297,8 @@
                     </tr>
                     <tr>
                         <td>추천인 아이디</td>
-                        <td><input type='text' class='normaltext'></td>
+                        <td><input type='text' class='normaltext' name="referer"></td>
                     </tr>
-                </form>
             </table>
         </div>
     </div>
@@ -383,7 +380,7 @@ PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 �
             <button name='button'><span>취소</span></button>
         </div>
     </div>
-
+</form>
 
     <div class='box8'>
         <div class='box8_inner'>
