@@ -25,14 +25,14 @@
             </ul>
         </div>
         <div class='logo'>
-            <a href='shoppingmall.html'><img src="img/logo.png" alt='' width='300'></a>
+            <a href='shoppingmall.jsp'><img src="img/logo.png" alt='' width='300'></a>
         </div>
         <div class='box1_2'>
         <c:if test="${sessionScope.id ne null}">${sessionScope.id} <span
 						style="font-size: 12px; display: inline;">님 안녕하세요.</span>
 				</c:if>
             <ul class='join'>
-                <li><a href="login.html"><i class="fas fa-link"></i><span>LOGIN <small>OR</small> JOIN</span></a></li>
+                <li><a href="login.jsp"><i class="fas fa-link"></i><span>LOGIN <small>OR</small> JOIN</span></a></li>
                 <li><a href="#"><i class="fas fa-user"></i><span>MY PAGE</span></a></li>
                 <li><a href="#"><i class="fas fa-shopping-cart"></i><span>CART</span></a></li>
             </ul>
@@ -379,7 +379,7 @@ PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 �
     <div class='boxE'>
         <div class='confirm'>
             <h5>*서비스 제공을 위해 수집하는 위 개인정보에 대해 동의하지 않거나 개인정보를 기재하지 않음으로써 거부할 수 있습니다.<br>단, 이에 따라 제공되는 서비스가 제한될 수 있습니다.</h5>
-            <button name='button'><span>회원가입</span></button>
+            <button name='button'>회원가입</span></button>
             <button name='button'><span>취소</span></button>
         </div>
     </div>

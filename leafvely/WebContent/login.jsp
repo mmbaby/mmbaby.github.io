@@ -27,7 +27,7 @@
 			</ul>
 		</div>
 		<div class='logo'>
-			<a href='shoppingmall.html'><img src="img/logo.png" alt=''
+			<a href='shoppingmall.jsp'><img src="img/logo.png" alt=''
 				width='300'></a>
 		</div>
 		<div class='box1_2'>
@@ -37,7 +37,7 @@
 				</c:if>
 			</div>
 			<ul class='join'>
-				<li><a href="login.html" id='scroll'><i class="fas fa-link"></i><span>LOGIN
+				<li><a href="login.jsp" id='scroll'><i class="fas fa-link"></i><span>LOGIN
 							<small>OR</small> JOIN
 					</span></a></li>
 				<li><a href="#"><i class="fas fa-user"></i><span>MY
@@ -176,7 +176,7 @@
 			id='ing'> <label for='ing'>로그인상태유지</label>
 	</div>
 	<div class='login_btn'>
-		<a href="join.html"><button id='join'>
+		<a href="join.jsp"><button id='join'>
 				<span>회원가입</span>
 			</button></a>
 		<button id='login'>
