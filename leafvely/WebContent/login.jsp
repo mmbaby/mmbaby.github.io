@@ -6,12 +6,15 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Document</title>
+<title>LOGIN</title>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/shoppingmall.js"></script>
+<script src="js/login.js"></script>
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 <link rel='stylesheet' href="css/shoppingmall.css">
+<link rel='stylesheet' href="css/login.css">
+
 </head>
 
 <body>
@@ -34,7 +37,7 @@
 				</c:if>
 			</div>
 			<ul class='join'>
-				<li><a href="loginPage.do"><i class="fas fa-link"></i><span>LOGIN
+				<li><a href="login.html" id='scroll'><i class="fas fa-link"></i><span>LOGIN
 							<small>OR</small> JOIN
 					</span></a></li>
 				<li><a href="#"><i class="fas fa-user"></i><span>MY
@@ -160,109 +163,30 @@
 			</div>
 		</div>
 	</div>
-	<div class='box4'>
-		<div class='panel'>
-			<div class='imges'>
-				<ul class='img_slide'>
-					<li class='active'><a href='#'><img
-							src="img/clothing-store-984396_1280.jpg" alt=''></a></li>
-					<li><a href='#'><img src="img/apparel-1850804_1280.jpg"
-							alt='';></a></li>
-					<li><a href='#'><img src="img/fashion-605508_1280.jpg"
-							alt=''></a></li>
-					<li><a href='#'><img src="img/cloth-1835894_1280.jpg"
-							alt=''></a></li>
-					<li><a href='#'><img
-							src='img/shopping-mall-906721_1280.jpg' alt=''></a></li>
-				</ul>
-			</div>
-			<div class='control_btn'>
-				<ul class='btn'>
-					<li><img src="img/btn.png" alt=''></li>
-					<li><img src="img/btn.png" alt=''></li>
-					<li><img src="img/btn.png" alt=''></li>
-					<li><img src="img/btn.png" alt=''></li>
-					<li><img src="img/btn.png" alt=''></li>
-				</ul>
-			</div>
-		</div>
+
+	<div class='loginlogo'>
+		<img src="img/loginlogo.png" alt=''>
 	</div>
-	<div class='box5'>
-		<div class='left'>
-			<a href='#'> <i class="fas fa-chevron-left"></i>
-			</a>
-		</div>
-		<div class='content_panel'>
-			<ul class='contents'>
-				<li><a href='#'><img src="img/content(1).png" alt=''></a></li>
-				<li><a href='#'><img src="img/content(2).png" alt=''></a></li>
-				<li><a href='#'><img src="img/content(3).png" alt=''></a></li>
-				<li><a href='#'><img src="img/content(4).png" alt=''></a></li>
-				<li><a href='#'><img src="img/content(5).png" alt=''></a></li>
-			</ul>
-		</div>
-		<div class='right'>
-			<a href='#'> <i class="fas fa-chevron-right"></i>
-			</a>
-		</div>
-
+	
+	<div class='logininput'>
+		<h2>ID</h2>
+		<input type="text"><br>
+		<h2>PW</h2>
+		<input type='password'><br> <input type='checkbox'
+			id='ing'> <label for='ing'>로그인상태유지</label>
 	</div>
-	<div class='box6'>
-		<h3>NEW ARRIVAL</h3>
-		<div class='box6_1'>
-			<ul class='product'>
-				<li class='on'><img
-					src="img/KakaoTalk_20200228_192219865_01.jpg"></li>
-				<li><img src="img/KakaoTalk_20200228_192219865_02.jpg"></li>
-			</ul>
-
-			<ul class='product'>
-				<li class='on'><img
-					src="img/KakaoTalk_20200228_192219865_05.jpg"></li>
-				<li><img src="img/KakaoTalk_20200228_192219865_06.jpg"></li>
-			</ul>
-
-			<ul class='product'>
-				<li class='on'><img
-					src="img/KakaoTalk_20200228_192219865_07.jpg"></li>
-				<li><img src="img/KakaoTalk_20200228_192219865_08.jpg"></li>
-			</ul>
-
-			<ul class='product'>
-				<li class='on'><img
-					src="img/KakaoTalk_20200228_192219865_09.jpg"></li>
-				<li><img src="img/KakaoTalk_20200228_192219865_10.jpg"></li>
-			</ul>
-		</div>
-		<div class='box6_2'>
-			<ul class='product'>
-				<li class='on'><img
-					src="img/KakaoTalk_20200228_192219865_11.jpg"></li>
-				<li><img src="img/KakaoTalk_20200228_192219865_12.jpg"></li>
-			</ul>
-
-			<ul class='product'>
-				<li class='on'><img
-					src="img/KakaoTalk_20200228_192219865_13.jpg"></li>
-				<li><img src="img/KakaoTalk_20200228_192219865_14.jpg"></li>
-			</ul>
-
-			<ul class='product'>
-				<li class='on'><img
-					src="img/KakaoTalk_20200228_192219865_15.jpg"></li>
-				<li><img src="img/KakaoTalk_20200228_192219865_16.jpg"></li>
-			</ul>
-
-			<ul class='product'>
-				<li class='on'><img
-					src="img/KakaoTalk_20200228_200117496_01.jpg"></li>
-				<li><img src="img/KakaoTalk_20200228_200117496_02.jpg"></li>
-			</ul>
-		</div>
+	<div class='login_btn'>
+		<a href="join.html"><button id='join'>
+				<span>회원가입</span>
+			</button></a>
+		<button id='login'>
+			<span>로그인</span>
+		</button>
 	</div>
-	<div class='box7'>
-		<img src="img/banner.png" alt=''>
-	</div>
+
+
+
+
 	<div class='box8'>
 		<div class='box8_inner'>
 			<div class='box8_1'>
