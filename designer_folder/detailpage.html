@@ -1,17 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
-    <title>DETAILPAGE</title>
+    <title>DETAILPAGE1</title>
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="shoppingmall.js"></script>
+    <script src="js/shoppingmall.js"></script>
+    <script src='js/detailpage.js'></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel='stylesheet' href="shoppingmall.css">
+    <link rel='stylesheet' href="css/shoppingmall.css">
     <link rel='stylesheet' href="css/detailpage.css">
 </head>
 
-<body>
+<body class='detail1' onload="init();">
     <div class='box1'>
         <div class='box1_1'>
             <ul class='bookmark'>
@@ -23,8 +27,12 @@
             <a href='shoppingmall.html'><img src="img/logo.png" alt='' width='300'></a>
         </div>
         <div class='box1_2'>
+            <div class="loginStatus">
+                <c:if test="${sessionScope.id ne null}">${sessionScope.id} <span style="font-size: 12px; display: inline;">님 안녕하세요.</span>
+                </c:if>
+            </div>
             <ul class='join'>
-                <li><a href="login.html"><i class="fas fa-link"></i><span>LOGIN <small>OR</small> JOIN</span></a></li>
+                <li><a href="loginPage.do"><i class="fas fa-link"></i><span>LOGIN <small>OR</small> JOIN</span></a></li>
                 <li><a href="#"><i class="fas fa-user"></i><span>MY PAGE</span></a></li>
                 <li><a href="#"><i class="fas fa-shopping-cart"></i><span>CART</span></a></li>
             </ul>
@@ -145,102 +153,146 @@
             </div>
         </div>
     </div>
-    <div class='box4'>
-        <div class='panel'>
-            <div class='imges'>
-                <ul class='img_slide'>
-                    <li class='active'><a href='#'><img src="img/clothing-store-984396_1280.jpg" alt=''></a></li>
-                    <li><a href='#'><img src="img/apparel-1850804_1280.jpg" alt='' ;></a></li>
-                    <li><a href='#'><img src="img/fashion-605508_1280.jpg" alt=''></a></li>
-                    <li><a href='#'><img src="img/cloth-1835894_1280.jpg" alt=''></a></li>
-                    <li><a href='#'><img src='img/shopping-mall-906721_1280.jpg' alt=''></a></li>
-                </ul>
-            </div>
-            <div class='control_btn'>
-                <ul class='btn'>
-                    <li><img src="img/btn.png" alt=''></li>
-                    <li><img src="img/btn.png" alt=''></li>
-                    <li><img src="img/btn.png" alt=''></li>
-                    <li><img src="img/btn.png" alt=''></li>
-                    <li><img src="img/btn.png" alt=''></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class='box5'>
-        <div class='left'>
-            <a href='#'>
-                <i class="fas fa-chevron-left"></i>
-            </a></div>
-        <div class='content_panel'>
-            <ul class='contents'>
-                <li><a href='#'><img src="img/content(1).png" alt=''></a></li>
-                <li><a href='#'><img src="img/content(2).png" alt=''></a></li>
-                <li><a href='#'><img src="img/content(3).png" alt=''></a></li>
-                <li><a href='#'><img src="img/content(4).png" alt=''></a></li>
-                <li><a href='#'><img src="img/content(5).png" alt=''></a></li>
-            </ul>
-        </div>
-        <div class='right'>
-            <a href='#'>
-                <i class="fas fa-chevron-right"></i>
-            </a></div>
 
-    </div>
-    <div class='box6'>
-        <h3>NEW ARRIVAL</h3>
-        <div class='box6_1'>
-            <ul class='product'>
+    <div class='boxA'>
+        <div class='mainimg'>
+            <ul>
                 <li class='on'><img src="img/KakaoTalk_20200228_192219865_01.jpg"></li>
                 <li><img src="img/KakaoTalk_20200228_192219865_02.jpg"></li>
             </ul>
-
-            <ul class='product'>
-                <li class='on'><img src="img/KakaoTalk_20200228_192219865_05.jpg"></li>
-                <li><img src="img/KakaoTalk_20200228_192219865_06.jpg"></li>
-            </ul>
-
-            <ul class='product'>
-                <li class='on'><img src="img/KakaoTalk_20200228_192219865_07.jpg"></li>
-                <li><img src="img/KakaoTalk_20200228_192219865_08.jpg"></li>
-            </ul>
-
-            <ul class='product'>
-                <li class='on'><img src="img/KakaoTalk_20200228_192219865_09.jpg"></li>
-                <li><img src="img/KakaoTalk_20200228_192219865_10.jpg"></li>
-            </ul>
         </div>
-        <div class='box6_2'>
-            <ul class='product'>
-                <li class='on'><img src="img/KakaoTalk_20200228_192219865_11.jpg"></li>
-                <li><img src="img/KakaoTalk_20200228_192219865_12.jpg"></li>
-            </ul>
+        <div class='img_side'>
+            <div class='story'>
+                <h3>프로필사진 GET! 시밀러룩 DAY!</h3>
+                <div class='story_label'>
+                    <ul>
+                        <li>NEW5% DC</li>
+                        <li>LEAFVELY 추천</li>
+                    </ul>
+                </div>
+                <p>맆블리는 인생샷사진 찍을때, 카페를 간다!</p>
+            </div>
+            <div class='price'>
+                <table>
+                    <tr>
+                        <td>판매가</td>
+                        <td><span>32,000</span></td>
+                    </tr>
+                    <tr>
+                        <td>할인판매가</td>
+                        <td>30,400원 (1,600원 할인)</td>
+                    </tr>
+                    <tr>
+                        <td>적립금</td>
+                        <td>300원</td>
+                    </tr>
+                    <tr>
+                        <td>배송비</td>
+                        <td>2,000원 (50,000원 이상 구매시 무료)</td>
+                    </tr>
+                    <tr>
+                        <td>무이자할부</td>
+                        <td><input type='button' value='카드혜택안내 +'></td>
+                    </tr>
+                    <tr>
+                        <td>SNS 공유</td>
+                        <td><i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-twitter-square"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GENDER</td>
+                        <td>
+                            <select>
+                                <option>-[필수] 옵션을 선택해 주세요-</option>
+                                <option>Female </option>
+                                <option>Male</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SIZE</td>
+                        <td>
+                            <select>
+                                <option>-[필수] 옵션을 선택해 주세요-</option>
+                                <option>FREE SIZE</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    <div class='boxB'>
+            <div class='buy'>
+                <form name="form" method="get">
+                    수량 : <input type=hidden name="sell_price" value="30400">
+                    <input type="text" name="amount" value="1" size="3" onchange="change();">
+                    <input type="button" value=" + " onclick="add();">
+                    <input type="button" value=" - " onclick="del();"><br>
 
-            <ul class='product'>
-                <li class='on'><img src="img/KakaoTalk_20200228_192219865_13.jpg"></li>
-                <li><img src="img/KakaoTalk_20200228_192219865_14.jpg"></li>
+                    금액 : <input type="text" name="sum" size="11" readonly>원
+                </form>
+            </div>
+        </div>
+    <div class='boxC'>
+        <img src='img/recommend.png' alt='' width='600'>
+    </div>
+    <div class='boxD'>
+        <div class='recommend_item'>
+            <ul class='item'>
+                <li><a href='#'><img src="img/bannerimg3.jpg" width='200'></a></li>
+                <li><a href='#'><img src="img/bannerimg4.jpg" width='200'></a></li>
             </ul>
-
-            <ul class='product'>
-                <li class='on'><img src="img/KakaoTalk_20200228_192219865_15.jpg"></li>
-                <li><img src="img/KakaoTalk_20200228_192219865_16.jpg"></li>
+            <ul class='item'>
+                <li><a href='#'><img src=img/bannerimg5.jpg width='200'></a></li>
+                <li><a href='#'><img src=img/bannerimg6.jpg width='200'></a></li>
             </ul>
-
-            <ul class='product'>
-                <li class='on'><img src="img/KakaoTalk_20200228_200117496_01.jpg"></li>
-                <li><img src="img/KakaoTalk_20200228_200117496_02.jpg"></li>
+            <ul class='item'>
+                <li><a href='#'><img src=img/bannerimg7.jpg width='200'></a></li>
+                <li><a href='#'><img src=img/bannerimg8.jpg width='200'></a></li>
+            </ul>
+            <ul class='item'>
+                <li><a href='#'><img src=img/bannerimg9.jpg width='200'></a></li>
+                <li><a href='#'><img src=img/bannerimg10.jpg width='200'></a></li>
+            </ul>
+            <ul class='item'>
+                <li><a href='#'><img src=img/bannerimg11.jpg width='200'></a></li>
+                <li><a href='#'><img src=img/bannerimg12.jpg width='200'></a></li>
             </ul>
         </div>
     </div>
-    <div class='box7'>
-        <img src="img/banner.png" alt=''>
+    <div class='boxE'>
+        <div class='detail_nav'>
+            <ul>
+                <li><a href='#'>상품상세정보</a></li>
+                <li><a href='#'>배송/교환/환불</a></li>
+                <li><a href='#'>상품구매후기</a></li>
+                <li><a href='#'>상품문의</a></li>
+            </ul>
+        </div>
     </div>
+    <div class='boxF'>
+        <div class='tip'>
+            <h4>SHOPPING TIP</h4>
+            <p>LEAFVELY라면 혜택받고 쇼핑하자!</p>
+        </div>
+        <div class='coupon'>
+            <img src="img/tip.png" width='300'>
+            <img src="img/tip1.png" width='200'>
+            <img src="img/tip2.png" width='200'>
+        </div>
+    </div>
+    <div class='boxG'></div>
+    <div class='boxH'></div>
+
     <div class='box8'>
         <div class='box8_inner'>
             <div class='box8_1'>
                 <div class='call'>
                     <h1><i class="fas fa-phone-volume"></i>
-                    1588-0316</h1>
+                        1588-0316</h1>
                 </div>
                 <div class='time'>
                     <p>업무시간-10:00~17:00(점심시간-12:20~13:20)</p>

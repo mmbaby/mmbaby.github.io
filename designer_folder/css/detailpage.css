@@ -1,0 +1,91 @@
+*{margin:0; padding:0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+.boxB,.boxC,.boxD,.boxE,.boxF,.boxG,.boxH{
+    width:1000px;
+    margin:0 auto;
+}
+.boxA{
+    padding-top:50px;
+    width:800px;
+    margin:0 auto;
+}
+.mainimg{
+    float: left;
+    width:50%;
+}
+.img_side{
+    float: left;
+    width:50%;
+}
+.boxA:after{
+    display: block;
+    content:'';
+    clear: both;
+}
+.mainimg img{
+    width:300px;
+}
+.mainimg li.on{
+    display: block;
+}
+.mainimg li{
+    display: none;
+}
+.story{
+    margin-bottom: 10px;
+}
+.story h3{
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+.story_label{
+    text-align: center;
+    width:400px;
+    height: 20px;
+    margin-bottom: 10px;     
+}
+.story_label li{
+    float: left;
+    width:85px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    display: inline-block;
+    margin:0 5px;
+    cursor: pointer;
+}
+.story_label li:first-child{
+    color:#fff;
+    background-color:#ff9999;
+}
+.story_label li:last-child{
+    color:#8185a0;
+    background-color:#fff;
+    border:solid 1px #8185a0;
+    box-sizing: border-box;
+}
+.story p{
+    font-size: 12px;
+    display: block;   
+}
+.price{
+    margin-top:20px;
+    border-top: solid 1px #dddddd;
+}
+.price table td{
+    padding:5px;
+}
+.price table td:first-child{
+    font-size: 13px;
+    color:dimgrey;
+    text-align: right;
+}
+.price table td:last-child{
+    font-size: 14px;
+    color:dimgrey;
+    padding-left: 10px;
+}
+.price span{
+    text-decoration:line-through;
+}
