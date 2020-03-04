@@ -170,28 +170,18 @@
 	<form action="login" method="post">
 	<div class='logininput'>
 		<h2>ID</h2>
-		<input type="text"><br>
+		<input type="text" name="id"><br>
 		<h2>PW</h2>
-		<input type='password'><br> <input type='checkbox'
+		<input type='password' name="pw"><br> <input type='checkbox'
 			id='ing'> <label for='ing'>로그인상태유지</label>
 	</div>
 	<div class='login_btn'>
-<<<<<<< HEAD
-		<a href="join.html">
+		<a href="join.jsp">
 		<input type='button' id='join' name='join'>
 		<label for='join'>회원가입</label>
 			</a>
 		<input type='button' id='login' name='login' >
 		<label for='login'>로그인</label>
-		
-=======
-		<a href="join.jsp"><button id='join' type="button">
-				<span>회원가입</span>
-			</button></a>
-		<button id='login'>
-			<span>로그인</span>
-		</button>
->>>>>>> ab40997b93dbd34503c98155aca7abb400e1e820
 	</div>
 	</form>
 

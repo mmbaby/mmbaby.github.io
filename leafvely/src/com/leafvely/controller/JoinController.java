@@ -35,6 +35,7 @@ public class JoinController extends HttpServlet {
 	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		Command command = new JoinCommand();
 		command.execute(request);
 		response.sendRedirect("login.jsp");
