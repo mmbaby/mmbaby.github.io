@@ -247,7 +247,8 @@
 		</div>
 	</div>
 	<div class='quick'>
-		<a href="#"><i class="fas fa-chevron-up"></i></a> <a href=""><i
+		<a href="#"><i class="fas fa-chevron-up"></i></a> 
+		<a id='down'><i
 			class="fas fa-chevron-down"></i></a>
 	</div>
 </body>

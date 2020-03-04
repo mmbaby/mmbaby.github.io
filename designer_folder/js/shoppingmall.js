@@ -15,9 +15,9 @@ $(function () {
     });
    
     $('#down').click(function(e){
-        e.preventDefault()
+        e.preventDefault();
         var documentHeight=$(document).height();
-        console.log(documentHeight);
+//        console.log(documentHeight);
         $('html, body').stop().animate({
         'scrollTop' : documentHeight+'px'
         },500);

@@ -443,7 +443,7 @@ PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 �
     </div>
     <div class='quick'>
         <a href="#"><i class="fas fa-chevron-up"></i></a>
-        <a href=""><i class="fas fa-chevron-down"></i></a>
+        <a id='down'><i class="fas fa-chevron-down"></i></a>
     </div>
 </body>
 
