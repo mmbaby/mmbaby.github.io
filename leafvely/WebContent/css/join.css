@@ -87,6 +87,10 @@ input[class='normaltext']{
 .infor option{
     font-size: 12px;
 }
+.infor input[type=radio]+label{
+    font-size: 12px;
+    
+}
 .addinfo{
     margin:20px 0px;
     padding:10px 0px;
@@ -136,7 +140,7 @@ input[class='normaltext']{
 .confirm{
     text-align: center;
 }
-.confirm button{
+.confirm input{
     margin:20px 10px;
     padding:10px;
     display: inline-block;
@@ -145,15 +149,14 @@ input[class='normaltext']{
     cursor: pointer;
     border-radius: 2px;
     outline: 0;
-    
-}
-.confirm button:hover{
-    opacity: 0.8;
-}
-.confirm button span{
     font-size: 12px;
     font-weight: bold;
+    
 }
+.confirm input:hover{
+    opacity: 0.8;
+}
+
 .boxE{
     height: 130px;
     margin-top:30px;
