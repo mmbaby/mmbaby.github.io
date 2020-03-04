@@ -176,12 +176,13 @@
 			id='ing'> <label for='ing'>로그인상태유지</label>
 	</div>
 	<div class='login_btn'>
-		<a href="join.html"><button id='join'>
-				<span>회원가입</span>
-			</button></a>
-		<button id='login'>
-			<span>로그인</span>
-		</button>
+		<a href="join.html">
+		<input type='button' id='join' name='join'>
+		<label for='join'>회원가입</label>
+			</a>
+		<input type='button' id='login' name='login' >
+		<label for='login'>로그인</label>
+		
 	</div>
 
 

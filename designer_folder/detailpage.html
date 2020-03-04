@@ -203,7 +203,7 @@
                     <tr>
                         <td>GENDER</td>
                         <td>
-                            <select>
+                            <select id='gender' name='gender'>
                                 <option>-[필수] 옵션을 선택해 주세요-</option>
                                 <option>Female </option>
                                 <option>Male</option>
@@ -213,7 +213,7 @@
                     <tr>
                         <td>SIZE</td>
                         <td>
-                            <select>
+                            <select id='size' name='size'>
                                 <option>-[필수] 옵션을 선택해 주세요-</option>
                                 <option>FREE SIZE</option>
                             </select>
@@ -250,8 +250,22 @@
     </div>
     <div class='boxB'>
             <div class='buy'>
+               <form name='form' method='get'>
+                   <table>
+                       <tr>
+                           <td>프로필사진 GET! 시밀러룩 DAY!<br>
+                           -<input type='text' id='option1'><label for='option1'></label>
+                           /<input type='text' id='option2'>
+                           <label for='option2'></label>
+                           </td>
+                           <td>
+                               <input type='text' name='amount' value='1' size='3' onchange='change();'>
+                           </td>
+                       </tr>
+                   </table>
+               </form>
                 <form name="form" method="get">
-                    수량 : <input type=hidden name="sell_price" value="30400">
+                    수량 : <input type=hidden name="sell_price" value="30,400">
                     <input type="text" name="amount" value="1" size="3" onchange="change();">
                     <input type="button" value=" + " onclick="add();">
                     <input type="button" value=" - " onclick="del();"><br>

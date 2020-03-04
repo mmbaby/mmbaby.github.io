@@ -111,10 +111,8 @@ a{text-decoration: none;}
     display: none;
     position:absolute;
 }
-.buy input[type=text]{
-    visibility: hidden;
+.price select{
+    padding:2px 2px;
+    border-radius: 2px;
 }
-.buy input[value]{
-    
-    
-}
+

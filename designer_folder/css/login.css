@@ -53,24 +53,26 @@ input[type=checkbox]:checked+label:before{
 .login_btn{
     margin-top:20px;
     text-align: center;
-}
-.login_btn button{
-    margin:0 10px;
-    width:80px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    background-color: rgba(0,0,0,1);
-    outline: 0;
-}
-.login_btn button:hover{
-    opacity: 0.8;
-}
-.login_btn button span{
-    font-size: 12px;
-    color:#fff;
-    
-}
-.login_btn{
     margin-bottom: 150px;
+}
+.login_btn input[type=button]{
+	display:none;
+}
+.login_btn input[type=button]+label{
+	display:inline-block;
+	font-size:14px;
+	outline:0;
+	background-color:#000;
+	color:#fff;
+    width:60px;
+    height: 20px;
+    line-height: 20px;
+    margin-top:10px;
+    margin-left: 30px;
+    padding:5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.login_btn input[type=button]:hover+label{
+    opacity: 0.8;
 }
