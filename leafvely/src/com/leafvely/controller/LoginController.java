@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.leafvely.command.Command;
+import com.leafvely.command.JoinCommand;
 import com.leafvely.command.LoginCommand;
 
 /**
@@ -34,11 +35,10 @@ public class LoginController extends HttpServlet {
 	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		Command command = new LoginCommand();
-		command.execute();
-		
-		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-		rd.forward(request, response);
+		command.execute(request);
+		response.sendRedirect("login.jsp");
 	}
 
 }

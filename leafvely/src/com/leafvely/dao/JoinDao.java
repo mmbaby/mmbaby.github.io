@@ -11,23 +11,23 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 
 public class JoinDao {
+	HttpServletRequest request;
 	Connection con;
 
-	public JoinDao() {
+	public JoinDao(HttpServletRequest req) {
 		try {
+			request = req;
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String user = "kim";
 			String pw = "1612";
 			con = DriverManager.getConnection(url, user, pw);
-			System.out.println("완성");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("커넥션 객체 못함: "+e.getMessage());
 		} 
 	}
 
@@ -35,12 +35,14 @@ public class JoinDao {
 		String data_ = "";
 		for (int i = 0; i < 3; i++)
 			data_ += dataArray[i];
+		
 		try {
-			new SimpleDateFormat("yyyyMMdd").parse(data_);
+			return new SimpleDateFormat("yyyyMMdd").parse(data_);
 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return null;
 	}
@@ -53,14 +55,14 @@ public class JoinDao {
 		return phoneN;
 	}
 
-	public void updateMember(HttpServletRequest request) {
+	public void updateMember() {
 		// id,pw,질문,답변,이름,이메일,생년,우편,주소,상세주소,참고주소,번호,추천인
+		PreparedStatement ps = null;
 		try {
-			System.out.println("여기까지");
 			String sql = "INSERT INTO MEMBER VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
-			PreparedStatement ps = con.prepareStatement(sql);
+			ps = con.prepareStatement(sql);
 			String id = request.getParameter("id");
-			int pw = Integer.parseInt(request.getParameter("pw"));
+			String pw = request.getParameter("pw");
 			String pwCheckQ = request.getParameter("pwCheckQ");
 			String pwCheckA = request.getParameter("pwCheckA");
 			String userName = request.getParameter("userName");
@@ -76,12 +78,12 @@ public class JoinDao {
 			String referer = request.getParameter("referer");
 
 			ps.setString(1, id);
-			ps.setInt(2, pw);
+			ps.setString(2, pw);
 			ps.setString(3, pwCheckQ);
 			ps.setString(4, pwCheckA);
 			ps.setString(5, userName);
 			ps.setString(6, userEmail);
-			ps.setDate(7, (java.sql.Date) birthDate);
+			ps.setDate(7, new java.sql.Date(birthDate.getTime()));
 			ps.setString(8, postCode);
 			ps.setString(9, address);
 			ps.setString(10, addressDetail);
@@ -89,10 +91,17 @@ public class JoinDao {
 			ps.setString(12, phoneN);
 			ps.setString(13, referer);
 			
-			System.out.println("총 :"+ps.executeUpdate()+"개 추가 되었습니다.");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			try {
+				ps.close();
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }

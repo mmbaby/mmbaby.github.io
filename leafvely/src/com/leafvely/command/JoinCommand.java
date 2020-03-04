@@ -9,8 +9,8 @@ public class JoinCommand implements Command {
 	@Override
 	public void execute(HttpServletRequest request) {
 		// TODO Auto-generated method stub
-		JoinDao dao = new JoinDao();
-		dao.updateMember(request);
+		JoinDao dao = new JoinDao(request);
+		dao.updateMember();
 	}
 
 }
