@@ -14,9 +14,12 @@ $(function () {
 
     });
    
-    $('.quick>#down').click(function(){
+    $('#down').click(function(e){
+        e.preventDefault()
+        var documentHeight=$(document).height();
+        console.log(documentHeight);
         $('html, body').stop().animate({
-            'scrollTop': '2203px'
+        'scrollTop' : documentHeight+'px'
         },500);
     });
 

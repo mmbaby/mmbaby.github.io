@@ -1,8 +1,7 @@
-.boxA,.boxB,.boxC,.boxD,.boxE{
+.boxA,.boxB,.boxD,.boxE{
     width:800px;
     margin:0 auto;
 }
-
 .certification{
     margin-top:20px; 
 }
@@ -54,26 +53,30 @@
 .boxA{
     height: 100px;
 }
-.information{
+.infor{
     margin-top:50px;
 }
-.information, .addinfomation{
+.infor{
     font-size: 12px;
 }
-.information p, .addinfomation p{
+.infor p{
     font-size: 13px;
     text-align: right;
+    margin-right: 10px;
 }
-.information table{
+.infor table{
     margin-top:15px;
     padding-top:15px;
     border-top:solid 1px #dddddd;
 }
-.information span{
+.infor span{
     color:red;
 }
-.information td{
-    padding: 5px 10px;
+.infor td{
+    padding: 5px 0px;
+}
+input[type=checkbox]+label{
+    font-size: 13px;
 }
 input[class='smalltext']{
     width:50px;
@@ -81,38 +84,52 @@ input[class='smalltext']{
 input[class='normaltext']{
     width:90px;
 }
-.information option{
+.infor option{
     font-size: 12px;
 }
-.boxB{
-    height: 550px;
-}
-.addinfomation table{
-    margin-top:15px;
-    padding-top:15px;
+.addinfo{
+    margin:20px 0px;
+    padding:10px 0px;
     border-top:solid 1px #dddddd;
 }
-.addinfomation td{
+.addinfo table{
+    width:auto;
+    margin-top:15px;
+    padding-top:15px;
+    font-size: 13px;
+}
+.addinfo td{
     padding: 5px 10px;
 }
-.boxC{
-    height: 150px;
+.addinfo small{
+    font-size: 12px;
+    margin-left: 5px;
 }
 .noresize{
     resize:none;
     width:800px;
     height: 150px;
     font-size: 13px;
-    margin-top:20px;
+    margin-top:30px;
 }
 .agree_check{
     font-size: 13px;
     margin:10px;
 }
-.boxD{
-    height: 450px;
+.agree_check p{
+    display: inline;
+    margin-right: 20px;
+}
+.agree_all{
+    margin-top:20px;
+    padding-left: 20px;
+}
+#allagree+label{
+    font-size: 15px;
+    
 }
 .confirm h5{
+    margin-bottom: 30px;
     text-align: right;
     font-size: 12px;
 }
@@ -138,6 +155,7 @@ input[class='normaltext']{
     font-weight: bold;
 }
 .boxE{
-    height: 110px;
+    height: 130px;
+    margin-top:30px;
     margin-bottom: 200px;
 }

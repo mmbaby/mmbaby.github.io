@@ -388,6 +388,7 @@ ul{list-style: none;}
 	box-sizing: border-box;
 }
 .quick{
+    cursor: pointer;
     position:absolute;
     z-index: 5;
     top:300px;

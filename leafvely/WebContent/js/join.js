@@ -1,7 +1,7 @@
 $(function(){
    var joinPosition=$('.certification').offset().top;
     
-    $('html, body').animate({
+    $('html, body').stop().animate({
         'scrollTop':(joinPosition-100)+'px'
     },500); 
         
@@ -54,7 +54,15 @@ $(function(){
             }
         }).open();
     });
-      
-
+    
+    //전체동의
+    $('#allagree').click(function(){
+        if($('input[id=allagree]').prop('checked')){
+            $('.agree_check input[type=checkbox]').prop('checked',true);
+        }else{
+            $('.agree_check input[type=checkbox]').prop('checked',false);
+        }
+        
+    });
     
 });

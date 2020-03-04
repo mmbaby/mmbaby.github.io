@@ -168,7 +168,7 @@
     </div>
 <form action="join" method="post">
     <div class='boxB'>
-        <div class='information'>
+        <div class='infor'>
             <strong>기본정보 | </strong> 다음은 회원가입을 위한 <strong>필수입력</strong> 항목입니다.
             
                 <table>
@@ -176,14 +176,14 @@
                         <td>
                             <p>아이디<span>*</span></p>
                         </td>
-                        <td><input type='text' name="id"> (영문소문자/숫자,4~16자)</td>
+                        <td><input type='text' name="id"></td><td><small>(영문소문자/숫자,4~16자)</small></td>
                     </tr>
 
                     <tr>
                         <td>
                             <p>비밀번호<span>*</span></p>
                         </td>
-                        <td><input type='password' name="pw"> (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</td>
+                        <td><input type='password' name="pw"></td><td><small>(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</small></td>
                     </tr>
 
                     <tr>
@@ -197,7 +197,7 @@
                         <td>
                             <p>비밀번호 확인 질문<span>*</span></p>
                         </td>
-                        <td><select name="pwCheckQ">
+                        <td colspan="2"><select name="pwCheckQ">
                                 <option>선택해주세요</option>
                                 <option>맆블리 처음 기념 날짜는?</option>
                                 <option>맆블리 기억에 남는 여행 장소는?</option>
@@ -213,7 +213,7 @@
                         <td>
                             <p>비밀번호 확인 답변<span>*</span></p>
                         </td>
-                        <td colspan='2'><input type='text' name="pwCheckA"></td>
+                        <td><input type='text' name="pwCheckA"></td>
                     </tr>
 
                     <tr>
@@ -227,13 +227,13 @@
                         <td rowspan='3'>
                             <p>주소<span>*</span></p>
                         </td>
-                        <td><input type="text" id="sample6_postcode" class='normaltext' placeholder="우편번호" name="postCode"> <input type="button" id="sample6_execDaumPostcode" value="우편번호 찾기"></td>
+                        <td><input type="text" id="sample6_postcode" placeholder="우편번호" name="postCode"></td><td><input type="button" id="sample6_execDaumPostcode" value="우편번호 찾기"></td>
                     </tr>
                     <tr>
                         <td><input type="text" id="sample6_address" placeholder="주소" name="address"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="sample6_detailAddress" placeholder="상세주소" name="addressDetail"> <input type="text" id="sample6_extraAddress" placeholder="참고항목" name="addressExtra"></td>
+                        <td><input type="text" id="sample6_detailAddress" placeholder="상세주소" name="addressDetail"> </td><td><input type="text" id="sample6_extraAddress" placeholder="참고항목" name="addressExtra"></td>
                     </tr>
                     <tr>
                         <td>
@@ -259,33 +259,40 @@
                             <p>SMS 수신여부<span>*</span></p>
                         </td>
                         <td><input type='checkbox' name='name' id='agree1'>
-                            <label for='agree1'>동의함</label></td>
+                            <label for='agree1'>동의함(선택)</label></td>
                     </tr>
                     <tr>
-                        <td>쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.</td>
+                        <td colspan="3"><small>쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.</small></td>
                     </tr>
                     <tr>
                         <td>
                             <p>이메일<span>*</span></p>
                         </td>
                         <td><input type='email' name="userEmail"></td>
+                        <td colspan="2">@ <select>
+                            <option>직접입력</option>
+                            <option>naver.com</option>
+                            <option>hanmail.net</option>
+                            <option>google.co.kr</option>
+                            <option>nate.com</option>
+                        </select></td>
                     </tr>
                     <tr>
                         <td rowspan='2'>
                             <p>이메일 수신여부<span>*</span></p>
                         </td>
                         <td><input type='checkbox' name='name' id='agree2'>
-                            <label for='agree2'>동의함</label></td>
+                            <label for='agree2'>동의함(선택)</label></td>
                     </tr>
                     <tr>
-                        <td>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</td>
+                        <td colspan="3"><small>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</small></td>
                     </tr>
                 </table>
         </div>
-    </div>
-    <div class='boxC'>
-        <div class='addinfomation'>
-            <strong>추가정보 | </strong>
+    
+        <div class='addinfo'>
+            <strong>추가정보 | </strong> 
+            <small>선택사항</small>
             <table>
                     <tr>
                         <td>생년월일</td>
@@ -330,8 +337,9 @@ PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 �
 
             </textarea>
             <div class='agree_check'>
-                이용약관에 동의하십니까? <input type='checkbox' name='name' id='agree3'>
-                <label for='agree3'>동의함</label>
+                <p>이용약관에 동의하십니까?</p> 
+                <input type='checkbox' name='name' id='agree_1'>
+                <label for='agree_1'>동의함 (필수)</label>
             </div>
             <textarea class='noresize'>
               제 3조 (약관 등의 명시와 설명 및 개정)
@@ -368,8 +376,13 @@ PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 �
 
             </textarea>
             <div class='agree_check'>
-                개인정보 수집 및 이용에 동의하십니까? <input type='checkbox' name='name' id='agree4'>
-                <label for='agree4'>동의함</label>
+                <p>개인정보 수집 및 이용에 동의하십니까?</p> 
+                <input type='checkbox' name='name' id='agree_2'>
+                <label for='agree_2'>동의함 (필수)</label>
+            </div>
+            <div class='agree_all'>
+                <input type='checkbox' name='name'id='allagree'>
+                <label for='allagree'>전체동의 하기</label>
             </div>
         </div>
     </div>
