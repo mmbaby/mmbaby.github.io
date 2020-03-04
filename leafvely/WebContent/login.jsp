@@ -14,7 +14,12 @@
 	href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 <link rel='stylesheet' href="css/shoppingmall.css">
 <link rel='stylesheet' href="css/login.css">
-
+<c:if test="${not empty param.fail}">
+	<script type="text/javascript">
+		alert("아이디나 비밀번호를 찾을수 없습니다.\n다시 시도 해주세요.");
+		history.back();
+	</script>
+</c:if>
 </head>
 
 <body>
@@ -32,9 +37,6 @@
 		</div>
 		<div class='box1_2'>
 			<div class="loginStatus">
-				<c:if test="${sessionScope.id ne null}">${sessionScope.id} <span
-						style="font-size: 12px; display: inline;">님 안녕하세요.</span>
-				</c:if>
 			</div>
 			<ul class='join'>
 				<li><a href="login.jsp" id='scroll'><i class="fas fa-link"></i><span>LOGIN
@@ -170,9 +172,9 @@
 	<form action="login" method="post">
 	<div class='logininput'>
 		<h2>ID</h2>
-		<input type="text" name="id"><br>
+		<input type="text" name="id" id="idresult" required><br>
 		<h2>PW</h2>
-		<input type='password' name="pw"><br> <input type='checkbox'
+		<input type='password' name="pw" id="pwresult" required><br> <input type='checkbox'
 			id='ing'> <label for='ing'>로그인상태유지</label>
 	</div>
 	<div class='login_btn'>
@@ -180,7 +182,7 @@
 		<input type='button' id='join' name='join'>
 		<label for='join'>회원가입</label>
 			</a>
-		<input type='button' id='login' name='login' >
+		<input type="submit" id='login' name='login' >
 		<label for='login'>로그인</label>
 	</div>
 	</form>

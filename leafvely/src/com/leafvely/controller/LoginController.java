@@ -8,9 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.SendResult;
 
 import com.leafvely.command.Command;
-import com.leafvely.command.JoinCommand;
 import com.leafvely.command.LoginCommand;
 
 /**
@@ -18,6 +19,7 @@ import com.leafvely.command.LoginCommand;
  */
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -38,7 +40,17 @@ public class LoginController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		Command command = new LoginCommand();
 		command.execute(request);
-		response.sendRedirect("login.jsp");
+		HttpSession session = request.getSession();
+		String viewPage = "";
+		if(session.getAttribute("id")!=null)
+			viewPage = "shoppingmall.jsp";
+		else {
+			response.sendRedirect("login.jsp?fail='yes'");
+			return;
+		}
+		
+		RequestDispatcher rd = request.getRequestDispatcher(viewPage);
+		rd.forward(request, response);
 	}
 
 }

@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.leafvely.dto.MemberDto;
 
@@ -38,10 +39,13 @@ public class LoginDao {
 			ps = con.prepareStatement(sql);
 			ps.setString(1,id);
 			rs = ps.executeQuery();
-			if(rs.next()&&rs.getString("pw").equals(input_pw))
-				request.setAttribute("loginCheck", "success");
-			else 
-				request.setAttribute("loginCheck", "fail");
+			if(rs.next()&&rs.getString("pw").equals(input_pw)) {
+				HttpSession session = request.getSession();
+				session.setAttribute("id", id);
+			}
+			else {
+				System.out.println("¾øÀ½");
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
