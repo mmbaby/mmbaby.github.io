@@ -31,7 +31,7 @@
 				</c:if>
 			</div>
             <ul class='join'>
-                <li><a href="loginPage.do"><i class="fas fa-link"></i><span>LOGIN <small>OR</small> JOIN</span></a></li>
+                <li id='logoutChange'><a href="loginPage.do"><i class="fas fa-link"></i><span>LOGIN <small>OR</small> JOIN</span></a></li>
                 <li><a href="#"><i class="fas fa-user"></i><span>MY PAGE</span></a></li>
                 <li><a href="#"><i class="fas fa-shopping-cart"></i><span>CART</span></a></li>
             </ul>
