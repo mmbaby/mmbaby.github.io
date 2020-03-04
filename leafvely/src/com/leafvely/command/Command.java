@@ -1,5 +1,7 @@
 package com.leafvely.command;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface Command {
-	public void execute();
+	public void execute(HttpServletRequest request);
 }

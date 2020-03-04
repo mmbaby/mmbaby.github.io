@@ -27,7 +27,7 @@
 			</ul>
 		</div>
 		<div class='logo'>
-			<a href='shoppingmall.html'><img src="img/logo.png" alt=''
+			<a href='shoppingmall.jsp'><img src="img/logo.png" alt=''
 				width='300'></a>
 		</div>
 		<div class='box1_2'>
@@ -37,7 +37,7 @@
 				</c:if>
 			</div>
 			<ul class='join'>
-				<li><a href="login.html" id='scroll'><i class="fas fa-link"></i><span>LOGIN
+				<li><a href="login.jsp" id='scroll'><i class="fas fa-link"></i><span>LOGIN
 							<small>OR</small> JOIN
 					</span></a></li>
 				<li><a href="#"><i class="fas fa-user"></i><span>MY
@@ -167,7 +167,7 @@
 	<div class='loginlogo'>
 		<img src="img/loginlogo.png" alt=''>
 	</div>
-	
+	<form action="login" method="post">
 	<div class='logininput'>
 		<h2>ID</h2>
 		<input type="text"><br>
@@ -176,6 +176,7 @@
 			id='ing'> <label for='ing'>로그인상태유지</label>
 	</div>
 	<div class='login_btn'>
+<<<<<<< HEAD
 		<a href="join.html">
 		<input type='button' id='join' name='join'>
 		<label for='join'>회원가입</label>
@@ -183,7 +184,16 @@
 		<input type='button' id='login' name='login' >
 		<label for='login'>로그인</label>
 		
+=======
+		<a href="join.jsp"><button id='join' type="button">
+				<span>회원가입</span>
+			</button></a>
+		<button id='login'>
+			<span>로그인</span>
+		</button>
+>>>>>>> ab40997b93dbd34503c98155aca7abb400e1e820
 	</div>
+	</form>
 
 
 
