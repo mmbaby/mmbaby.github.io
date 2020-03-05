@@ -27,7 +27,7 @@
 			</ul>
 		</div>
 		<div class='logo'>
-			<a href='shoppingmall.html'><img src="img/logo.png" alt=''
+			<a href='shoppingmall.jsp'><img src="img/logo.png" alt=''
 				width='300'></a>
 		</div>
 		<div class='box1_2'>
