@@ -1,3 +1,4 @@
+
 $(function () {
     var joinPosition = $('.certification').offset().top;
 
@@ -49,7 +50,7 @@ $(function () {
         }).open();
     });
 
-    //전체동의
+    //전체동의(필수사항)
     $('#allagree').click(function () {
         if ($('input[id=allagree]').prop('checked')) {
             $('.agree_check input[type=checkbox]').prop('checked', true);
@@ -58,13 +59,51 @@ $(function () {
         }
 
     });
+       $('#add_agree').click(function () {
+        if ($('input[id=add_agree]').prop('checked')) {
+            $('#prefer input[type=checkbox]').prop('checked', true);
+            $('#prefer input').attr('disabled','disabled');
+        } else {
+            $('#prefer input[type=checkbox]').prop('checked', false);
+             $('#prefer input').removeAttr('disabled');
+        }
+
+    });
+    
+    $('#prefer input[type=checkbox]').click(function(){
+        if($('#prefer input[id=input_1]').prop('checked')){
+            $('#prefer input[name=nickname]').attr('disabled','disabled');
+        }else{
+            $('#prefer input[name=nickname]').removeAttr('disabled'); 
+        }
+        
+        if($('#prefer input[id=input_2]').prop('checked')){
+            $('#prefer input[name=birthDate]').attr('disabled','disabled');
+            $('#prefer input[type=radio]').attr('disabled','disabled');
+        }else{
+             $('#prefer input[name=birthDate]').removeAttr('disabled');
+             $('#prefer input[type=radio]').removeAttr('disabled');
+        }
+        
+        if($('#prefer input[id=input_3]').prop('checked')){
+            $('#prefer input[name=referer]').attr('disabled','disabled');
+        }else{
+            $('#prefer input[name=referer]').removeAttr('disabled'); 
+        }
+        
+    });
+        
+    
+    
+
+
 
     //엔터키 submit 막기
     $('input').keydown(function () {
         if (event.keyCode === 13) {
             event.preventDefault();
         }
-    })
+    });
 
     //비밀번호 일치
     $('#same').hide();
@@ -84,17 +123,17 @@ $(function () {
         }
     });
     //비밀번호 틀릴때 제출 안되게
-    $('input[type=submit]').click(function(){
+    $('input[type=submit]').click(function () {
         var pw = $('input[name=pw]').val();
         var pwCheck = $('input[name=pwCheck]').val();
-       if(pw!=pwCheck){
-           $(this).attr('disabled','disabled');
-           alert('PW를 다시 한번 확인해주세요');
-       }
+        if (pw != pwCheck) {
+            $(this).attr('disabled', 'disabled');
+            alert('PW를 다시 한번 확인해주세요');
+        }
     });
-    
+
     //이메일값 넣기
-    $('select[name=emailSelect]').stop().change(function() {
+    $('select[name=emailSelect]').stop().change(function () {
         if ($(this).val() == '1') {
             $('#email_2').val('');
         } else {
@@ -111,3 +150,4 @@ $(function () {
 
 
 });
+   
