@@ -48,15 +48,7 @@ public class JoinDao {
 	}
 	
 	private String getEmail(String[] userEmailArray) {
-		String userEmail = "";
-		for(int i=0 ; i<3 ; i++) {
-			if(i==1)
-				userEmail+="@";
-			else
-				userEmail+=userEmailArray[(i+1)%2];
-		}
-		
-		return userEmail;
+		return userEmailArray[0]+"@"+userEmailArray[1];
 	}
 	
 	private String getPhoneNumber(String[] phoneNArray) {
@@ -96,7 +88,6 @@ public class JoinDao {
 			ps.setString(4, pwCheckA);
 			ps.setString(5, userName);
 			ps.setString(6, userEmail);
-			
 			ps.setDate(7, new java.sql.Date(birthDate.getTime()));
 			ps.setString(8, postCode);
 			ps.setString(9, address);
@@ -104,6 +95,8 @@ public class JoinDao {
 			ps.setString(11, addressExtra);
 			ps.setString(12, phoneN);
 			ps.setString(13, referer);
+			
+			ps.executeUpdate();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
