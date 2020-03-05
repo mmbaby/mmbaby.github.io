@@ -12,7 +12,56 @@ $(function () {
         }
         i = (i + 1) % 2;
     }, 2000);
+
+    //옵션 값 넣기
+    $('select[name=gender]').change(function () {
+        if ($(this).val() != '1') {
+            $('#option1').val($(this).val());
+            $('#option1').attr('readonly', true);
+        } else {
+            $('#option1').val('');
+        }
+    });
+
+    $('select[name=size]').change(function () {
+        if ($(this).val() != '1') {
+            $('#option2').val($(this).val());
+            $('#option2').attr('readonly', true);
+        } else {
+            $('#option2').val('');
+        }
+    });
+
+    //추천배너 사진
+    var count = 0;
+    setInterval(function () {
+        
+        var odd = $('.item li:odd');
+        var even = $('.item li:even');
+        if (count == 0) {
+            odd.addClass('view');
+            even.removeClass('view');
+        } else {
+            even.addClass('view');
+            odd.removeClass('view');
+        }
+        count = (count + 1) % 2;
+    }, 3000);
+
+    //배너 옆으로 넘기기
+
+    $('.item').each(function(index){
+        $(this).attr('data-index',index);
+    });
+    var i=0;
+    var imgCount=$('.item').length;
+    console.log(imgCount);
+    $('.go_left').click(function () {
+       
+    });
+
 });
+
 
 var sell_price;
 var amount;

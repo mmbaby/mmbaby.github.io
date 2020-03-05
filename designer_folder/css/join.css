@@ -91,6 +91,44 @@ input[class='normaltext']{
     font-size: 12px;
     
 }
+#prefer input[type=checkbox]{
+    display: none;
+}
+
+#prefer input[type=checkbox]+label:before{
+    width:15px;
+    height: 15px;
+    background-color: #fea89b;
+    border-radius: 50%;
+    display: inline-block;
+    content:'';
+    margin-right: 5px;
+    text-align: center;
+}
+#prefer input[type=checkbox]:checked+label:before{
+    content:'\2714';
+    color:#fff;
+    font-size: 12px;
+}
+#add_agree{
+    display: none;
+}
+#add_agree+label:before{
+    width:15px;
+    height: 15px;
+    box-sizing: border-box;
+    border: solid 2px #dddddd;
+    border-radius: 50%;
+    display: inline-block;
+    content:'';
+    text-align: center;
+}
+#add_agree:checked+label:before{
+    content:'\2714';
+    color:#000;
+    font-size: 12px;
+    vertical-align: middle;
+}
 .addinfo{
     margin:20px 0px;
     padding:10px 0px;

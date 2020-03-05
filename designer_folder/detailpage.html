@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title>DETAILPAGE1</title>
     <script src="js/jquery-3.4.1.min.js"></script>
+  
     <script src="js/shoppingmall.js"></script>
     <script src='js/detailpage.js'></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
@@ -203,8 +204,8 @@
                     <tr>
                         <td>GENDER</td>
                         <td>
-                            <select id='gender' name='gender'>
-                                <option>-[필수] 옵션을 선택해 주세요-</option>
+                            <select id='gender' name='gender' required>
+                                <option value="1">-[필수] 옵션을 선택해 주세요-</option>
                                 <option>Female </option>
                                 <option>Male</option>
                             </select>
@@ -213,8 +214,8 @@
                     <tr>
                         <td>SIZE</td>
                         <td>
-                            <select id='size' name='size'>
-                                <option>-[필수] 옵션을 선택해 주세요-</option>
+                            <select id='size' name='size' required>
+                                <option value="1">-[필수] 옵션을 선택해 주세요-</option>
                                 <option>FREE SIZE</option>
                             </select>
                         </td>
@@ -253,52 +254,69 @@
                <form name='form' method='get'>
                    <table>
                        <tr>
-                           <td>프로필사진 GET! 시밀러룩 DAY!<br>
-                           -<input type='text' id='option1'><label for='option1'></label>
-                           /<input type='text' id='option2'>
+                           <td style="vertical-align: bottom"><span>프로필사진 GET! 시밀러룩 DAY!</span><br><br>
+                           - <input type='text' class='none' id='option1' size='5' readonly onfocus="this.blur()">
+                           <label for='option1'></label>
+                           / <input type='text' class='none' id='option2' size='6'  readonly onfocus="this.blur()">
                            <label for='option2'></label>
                            </td>
-                           <td>
-                               <input type='text' name='amount' value='1' size='3' onchange='change();'>
+                           <td style="vertical-align: bottom">
+                               <input type='hidden' name='sell_price' value='30400'>
+                               <input type='text' name='amount' value='1' size='1' style='outline: 0;' onchange='change();'>
+                               <input type='button' value="+" onclick="add();">
+                               <input type='button' value='-'
+                               onclick='del();'>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td colspan='5' style='text-align: right'>
+                               \<input type='text' class='none' name='sum' size='11' value="" 
+                               style='font-weight: bold; font-size: 15px; text-align: right;'
+                               readonly onfocus="this.blur()">
                            </td>
                        </tr>
                    </table>
+                   <div class='buy_btn'>
+                       <input type="button" class='btn1' name='cart_in' id='cart_in'>
+                       <label for='cart_in'>장바구니에넣기</label>
+                       <input type="button" class='btn1' name='buy_now' id='buy_now'>
+                       <label for='buy_now'>바로구매하기</label>
+                   </div>
                </form>
-                <form name="form" method="get">
-                    수량 : <input type=hidden name="sell_price" value="30,400">
-                    <input type="text" name="amount" value="1" size="3" onchange="change();">
-                    <input type="button" value=" + " onclick="add();">
-                    <input type="button" value=" - " onclick="del();"><br>
-
-                    금액 : <input type="text" name="sum" size="11" value='' readonly>원
-                </form>
+                
             </div>
         </div>
     <div class='boxC'>
         <img src='img/recommend.png' alt='' width='600'>
     </div>
     <div class='boxD'>
+       <div class='go_left'>
+           <i class="fas fa-chevron-left"></i>
+       </div>
         <div class='recommend_item'>
             <ul class='item'>
-                <li><a href='#'><img src="img/bannerimg3.jpg" width='200'></a></li>
-                <li><a href='#'><img src="img/bannerimg4.jpg" width='200'></a></li>
+                <li class='view'><a href='#'><img src="img/bannerimg3.jpg"></a></li>
+                <li><a href='#'><img src="img/bannerimg4.jpg"></a></li>
             </ul>
             <ul class='item'>
-                <li><a href='#'><img src=img/bannerimg5.jpg width='200'></a></li>
-                <li><a href='#'><img src=img/bannerimg6.jpg width='200'></a></li>
+                <li class='view'><a href='#'><img src=img/bannerimg5.jpg></a></li>
+                <li><a href='#'><img src=img/bannerimg6.jpg></a></li>
             </ul>
             <ul class='item'>
-                <li><a href='#'><img src=img/bannerimg7.jpg width='200'></a></li>
-                <li><a href='#'><img src=img/bannerimg8.jpg width='200'></a></li>
+                <li class='view'><a href='#'><img src=img/bannerimg7.jpg></a></li>
+                <li><a href='#'><img src=img/bannerimg8.jpg></a></li>
             </ul>
             <ul class='item'>
-                <li><a href='#'><img src=img/bannerimg9.jpg width='200'></a></li>
-                <li><a href='#'><img src=img/bannerimg10.jpg width='200'></a></li>
+                <li class='view'><a href='#'><img src=img/bannerimg9.jpg></a></li>
+                <li><a href='#'><img src=img/bannerimg10.jpg></a></li>
             </ul>
             <ul class='item'>
-                <li><a href='#'><img src=img/bannerimg11.jpg width='200'></a></li>
-                <li><a href='#'><img src=img/bannerimg12.jpg width='200'></a></li>
+                <li class='view'><a href='#'><img src=img/bannerimg11.jpg></a></li>
+                <li><a href='#'><img src=img/bannerimg12.jpg></a></li>
             </ul>
+        </div>
+        <div class='go_right'>
+            <i class="fas fa-chevron-right"></i>
         </div>
     </div>
     <div class='boxE'>

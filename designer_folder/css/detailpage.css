@@ -17,6 +17,8 @@ a{text-decoration: none;}
 .img_side{
     float: left;
     width:50%;
+    border-bottom: solid 1px #dddddd;
+    padding-bottom: 10px;
 }
 .boxA:after{
     display: block;
@@ -114,5 +116,118 @@ a{text-decoration: none;}
 .price select{
     padding:2px 2px;
     border-radius: 2px;
+}
+.boxB{
+    height: 300px;
+    border-bottom: solid 1px #dddddd;
+}
+.buy{
+    padding-top:10px;
+    padding-left: 500px;
+}
+.buy table{
+    font-size: 13px;
+}
+.buy table td{
+    padding:10px 10px;
+}
+.buy input[class=none]{
+    border:none;
+    font-size: 12px;
+}
+.buy table span{
+    font-weight: bold;
+}
+.buy_btn{
+    text-align: right;
+    margin-right: 40px;
+}
+.buy_btn input[class=btn1]{
+    display: none;
+}
+.buy_btn input[class=btn1]+label{
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    width:150px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    margin:20px 10px;
+    transform: scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -webkit-transform:scale(1);
+}
+.buy_btn input[class=btn1]+label:hover{
+    transform: scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+}
+.buy_btn input[name=cart_in]+label{
+    background-color: #744f47;
+    color:#fff;
+}
+.buy_btn input[name=buy_now]+label{
+    color:#fff;
+    background-color: #f56066;   
+}
+.boxC{
+    margin-top:50px;
+}
+.boxC img{
+    display: block;
+    margin:0 auto;
+}
+.item img{
+    width:160px;
+    height: 214px;
+}
+.item{
+    float: left;
+}
+.boxD:after{
+    clear: both;
+    display: block;
+    content:'';
+}
+.item li a{
+    display: block;
+    padding:0 10px;
+}
+.recommend_item{
+    width:900px;
+    display: inline-block;
+    height: 220px;
+    margin-top:15px;
+}
+.boxD{
+    height: 250px;
+    margin-top:20px;
+    text-align: center;
+    position:relative;
+}
+.item li.view{
+    display: block;
+}
+.item li{
+    display: none;
+}
+.go_left,.go_right{
+    display: inline-block;
+    font-size: 25px;
+    width:25px;
+    height: 25px;
+    position: absolute;
+    top:112.5px;
+    cursor: pointer;
+}
+.go_left{
+    left: 0;
+}
+.go_right{
+    right: 0;
 }
 
