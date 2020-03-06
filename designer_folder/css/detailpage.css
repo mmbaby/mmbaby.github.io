@@ -175,7 +175,7 @@ a{text-decoration: none;}
     background-color: #f56066;   
 }
 .boxC{
-    margin-top:50px;
+    margin-top:100px;
 }
 .boxC img{
     display: block;
@@ -208,6 +208,10 @@ a{text-decoration: none;}
     margin-top:20px;
     text-align: center;
     position:relative;
+    
+}
+.boxE{
+    height: 40px;
 }
 .item li.view{
     display: block;
@@ -230,4 +234,71 @@ a{text-decoration: none;}
 .go_right{
     right: 0;
 }
-
+.detail_nav{
+    margin-top:40px;
+    text-align: center;
+}
+.detail_nav li{
+    float: left;
+    width:25%;
+}
+.detail_nav li a{
+    display: block;
+    padding:10px;
+    border:solid 1px #eeeeee;
+    font-size: 12px;
+    font-weight: 600;
+    color:dimgray;
+}
+.detail_nav li a.active{
+    background-color: #eeeeee;
+}
+.tip{
+    text-align: center;   
+}
+.tip h4,p{
+    font-size: 14px;
+}
+.boxF{
+    margin-top:50px;
+}
+.coupon{
+    text-align: center;
+}
+.coupon img{
+    height: 160px;
+    margin: 20px 10px;
+}
+.content_main img{
+    margin-bottom: 100px;
+}
+.content_main{
+    margin-top:300px;
+}
+.content_text{
+    padding-left: 50px;
+    margin-bottom: 80px;
+}
+.content_text h1{
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.content_text h2{
+    border-left: solid 8px #ff9c9b;
+    padding-left: 5px;
+    font-weight: normal;
+    color:#6d3f25;
+    margin-bottom: 10px;
+}
+.content_text p{
+    line-height: 25px;
+    color:#7a6456;
+}
+.content_text span{
+    font-weight: bold;
+    font-size: 18px;
+}
+.content_second img{
+    margin-bottom: 100px;
+}
