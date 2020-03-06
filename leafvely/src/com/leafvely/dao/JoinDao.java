@@ -32,6 +32,9 @@ public class JoinDao {
 	}
 
 	private Date formatStringToDate(String[] dataArray) {
+		if(dataArray==null)
+			return null;
+		
 		String data_ = "";
 		for (int i = 0; i < 3; i++)
 			data_ += dataArray[i];
@@ -60,10 +63,10 @@ public class JoinDao {
 	}
 
 	public void updateMember() {
-		// id,pw,질문,답변,이름,이메일,생년,우편,주소,상세주소,참고주소,번호,추천인
+		// id,pw,질문,답변,이름,이메일,생년,우편,주소,상세주소,참고주소,번호,추천인,닉네임
 		PreparedStatement ps = null;
 		try {
-			String sql = "INSERT INTO MEMBER VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO MEMBER VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			ps = con.prepareStatement(sql);
 			String id = request.getParameter("id");
 			String pw = request.getParameter("pw");
@@ -81,6 +84,7 @@ public class JoinDao {
 			String[] birthDateArray = request.getParameterValues("birthDate");
 			Date birthDate = formatStringToDate(birthDateArray);
 			String referer = request.getParameter("referer");
+			String nickName = request.getParameter("nickname");
 
 			ps.setString(1, id);
 			ps.setString(2, pw);
@@ -88,13 +92,25 @@ public class JoinDao {
 			ps.setString(4, pwCheckA);
 			ps.setString(5, userName);
 			ps.setString(6, userEmail);
-			ps.setDate(7, new java.sql.Date(birthDate.getTime()));
+			if(birthDate==null)
+				ps.setNull(7, java.sql.Types.NULL);
+			else
+				ps.setDate(7, new java.sql.Date(birthDate.getTime()));
 			ps.setString(8, postCode);
 			ps.setString(9, address);
 			ps.setString(10, addressDetail);
 			ps.setString(11, addressExtra);
 			ps.setString(12, phoneN);
-			ps.setString(13, referer);
+			if(referer==null)
+				ps.setNull(13, java.sql.Types.NULL);
+			else
+				ps.setString(13, referer);
+			if(nickName==null)
+				ps.setNull(14, java.sql.Types.NULL);
+			else
+				ps.setString(14, nickName);
+			
+				
 			
 			ps.executeUpdate();
 			

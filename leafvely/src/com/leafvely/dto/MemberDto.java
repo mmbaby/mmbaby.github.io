@@ -17,6 +17,7 @@ public class MemberDto {
 	String addressExtra;
 	String phoneN;
 	String referer;
+	String nickName;
 	
 	public MemberDto() {
 		// TODO Auto-generated constructor stub
@@ -24,7 +25,7 @@ public class MemberDto {
 
 	public MemberDto(String id, String pw, String pwCheckQ, String pwCheckA, String userName, String userEmail,
 			Date birthDate, String postCode, String address, String addressDetail, String addressExtra, String phoneN,
-			String referer) {
+			String referer, String nickName) {
 		this.id = id;
 		this.pw = pw;
 		this.pwCheckQ = pwCheckQ;
@@ -38,6 +39,7 @@ public class MemberDto {
 		this.addressExtra = addressExtra;
 		this.phoneN = phoneN;
 		this.referer = referer;
+		this.nickName = nickName;
 	}
 
 	public String getId() {
@@ -143,5 +145,14 @@ public class MemberDto {
 	public void setReferer(String referer) {
 		this.referer = referer;
 	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+	
 	
 }

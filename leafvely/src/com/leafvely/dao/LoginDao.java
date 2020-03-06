@@ -31,7 +31,7 @@ public class LoginDao {
 		}
 	}
 	
-	public void selectMember(String id, String input_pw) {
+	public MemberDto selectMember(String id, String input_pw) {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
@@ -39,13 +39,14 @@ public class LoginDao {
 			ps = con.prepareStatement(sql);
 			ps.setString(1,id);
 			rs = ps.executeQuery();
-			if(rs.next()&&rs.getString("pw").equals(input_pw)) {
-				HttpSession session = request.getSession();
-				session.setAttribute("id", id);
+			if(rs.next()) {
+				MemberDto mDto = new MemberDto();
+				mDto.setId(rs.getString("id"));
+				mDto.setPw(rs.getString("pw"));
+				return mDto;
 			}
-			else {
-				System.out.println("¾øÀ½");
-			}
+			else
+				return null;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -59,5 +60,6 @@ public class LoginDao {
 				e.printStackTrace();
 			}
 		}
+		return null;
 	}
 }

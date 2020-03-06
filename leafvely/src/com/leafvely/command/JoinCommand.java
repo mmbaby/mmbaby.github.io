@@ -1,6 +1,7 @@
 package com.leafvely.command;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.leafvely.dao.JoinDao;
 
@@ -10,7 +11,13 @@ public class JoinCommand implements Command {
 	public void execute(HttpServletRequest request) {
 		// TODO Auto-generated method stub
 		JoinDao dao = new JoinDao(request);
-		dao.updateMember();
+		Command command = new LoginCommand();
+		command.execute(request);
+		HttpSession session = request.getSession();
+		if(session.getAttribute("id")!=null)
+			session.invalidate();
+		else
+			dao.updateMember();
 	}
 
 }

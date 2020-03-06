@@ -327,23 +327,23 @@
                     <tr>
                         <td><input type="checkbox" name='input_1' id='input_1'><label for='input_1' >닉네임</label></td>
                         
-                        <td><input type='text' class='normaltext' name="nickname"></td>
+                        <td><input type='text' class='normaltext' name="nickname" required></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" name='input_2' id='input_2'><label for='input_2' >생년월일</label></td>
                         
-                        <td><input type='text' class='smalltext' name="birthDate">
-                            년 <input type='text' class='smalltext' name="birthDate">
-                            월 <input type='text' class='smalltext' name="birthDate">
+                        <td><input type='text' class='smalltext' name="birthDate" required>
+                            년 <input type='text' class='smalltext' name="birthDate" required>
+                            월 <input type='text' class='smalltext' name="birthDate" required>
                             일</td>
-                        <td><input type='radio' name='name' id='Lift'> <label for='Lift'>앙력</label> 
-                           <input type='radio' name='name' id='Lunar'>
+                        <td><input type='radio' name='name' id='Lift' required> <label for='Lift'>앙력</label> 
+                           <input type='radio' name='name' id='Lunar' required>
                             <label for='Lunar'>음력</label></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" name='input_3' id='input_3'><label for='input_3' >추천인 아이디</label></td>
                         
-                        <td><input type='text' class='normaltext' name="referer"></td>
+                        <td><input type='text' class='normaltext' name="referer" required></td>
                     </tr>
 
                 </table>
