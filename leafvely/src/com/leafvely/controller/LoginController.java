@@ -45,7 +45,7 @@ public class LoginController extends HttpServlet {
 		if(session.getAttribute("id")!=null)
 			viewPage = "shoppingmall.jsp";
 		else {
-			response.sendRedirect("login.jsp?fail='yes'");
+			response.sendRedirect("login.jsp?fail=yes");
 			return;
 		}
 		
