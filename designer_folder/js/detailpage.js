@@ -53,11 +53,14 @@ $(function () {
     $('.item').each(function(index){
         $(this).attr('data-index',index);
     });
-    var i=0;
-    var imgCount=$('.item').length;
-    console.log(imgCount);
+ 
     $('.go_left').click(function () {
-       
+        let first_index = $('.recommend_item').children().eq(0).attr("data-index");
+         $('.item[data-index='+(first_index)+']').appendTo($('.recommend_item'));
+    });
+     $('.go_right').click(function () {
+         let last_index = $('.recommend_item').children().eq(-1).attr("data-index");
+         $('.item[data-index='+(last_index)+']').prependTo($('.recommend_item'));
     });
 
 });

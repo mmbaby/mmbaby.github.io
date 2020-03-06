@@ -116,12 +116,10 @@ $(function () {
         moveLeft();
     }, 2000);
 
-    var i = 0;
-    var count = contentsSlide.length; //5
+    
     function moveLeft() {
-        $('.contents').append($('.contents>li[data-index=' + i + ']'));
-        //        console.log(i);
-        i = (i + 1) % 5;
+        let idx = $('.contents').children().eq(0).attr('data-index');
+        $('.contents').append($('.contents>li[data-index=' + idx + ']'));
     }
 
 
