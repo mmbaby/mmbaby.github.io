@@ -14,8 +14,10 @@ public class JoinCommand implements Command {
 		Command command = new LoginCommand();
 		command.execute(request);
 		HttpSession session = request.getSession();
-		if(session.getAttribute("id")!=null)
+		if(session.getAttribute("id")!=null) {
 			session.invalidate();
+			
+		}
 		else
 			dao.updateMember();
 	}
