@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title>DETAILPAGE1</title>
     <script src="js/jquery-3.4.1.min.js"></script>
-  
+
     <script src="js/shoppingmall.js"></script>
     <script src='js/detailpage.js'></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
@@ -222,11 +222,17 @@
                     </tr>
                 </table>
                 <div class='card_info'>
-                    <input type='button' name='button' id='notax'>
-                    <label for='notax'>무이자 할부</label>
-                    <input type='button' name='button' id='addtax'>
-                    <label for='addtax'>부분 무이자 할부</label>
-                    <ul class='notax'>
+                    <ul class='tag'>
+                        <li class='pick'><input type='button' name='button' id='notax'>
+                            <label for='notax'>무이자 할부</label>
+                        </li>
+                        <li>
+                            <input type='button' name='button' id='addtax'>
+                            <label for='addtax'>부분 무이자 할부</label>
+                        </li>
+                    </ul>
+
+                    <ul class='tax do'>
                         <li>삼성카드<span>2~6 개월 (5만원 이상)</span></li>
                         <li>신한카드<span>2~6 개월 (5만원 이상)</span></li>
                         <li>KB국민카드<span>2~6 개월 (5만원 이상)</span></li>
@@ -236,63 +242,60 @@
                         <li>씨티카드<span>2~6 개월 (5만원 이상)</span></li>
                         <li>하나카드<span>2~6 개월 (5만원 이상)</span></li>
                     </ul>
-                    <ul class='addtax'>
+                    <ul class='tax add'>
                         <li>삼성카드<span>10개월: 고객 1-4회차 부담(5만원 이상)<br>12개월: 고객 1-5회차 부담(5만원 이상)</span></li>
                         <li>신한카드<span>10개월: 고객 1-3회차 부담(5만원 이상)<br>12개월: 고객 1-4회차 부담(5만원 이상)</span></li>
                         <li>KB국민카드<span>10개월: 고객 1-4회차 부담(5만원 이상)<br>12개월: 고객 1-5회차 부담(5만원 이상)</span></li>
                         <li>비씨카드<span>10개월: 고객 1-2회차 부담(5만원 이상)<br>12개월: 고객 1-3회차 부담(5만원 이상)</span></li>
                         <li>NH농협카드<span>10개월: 고객 1-2회차 부담(5만원 이상)<br>12개월: 고객 1-4회차 부담(5만원 이상)</span></li>
-                        
+
                     </ul>
                 </div>
             </div>
         </div>
-        
+
     </div>
     <div class='boxB'>
-            <div class='buy'>
-               <form name='form' method='get'>
-                   <table>
-                       <tr>
-                           <td style="vertical-align: bottom"><span>프로필사진 GET! 시밀러룩 DAY!</span><br><br>
-                           - <input type='text' class='none' id='option1' size='5' readonly onfocus="this.blur()">
-                           <label for='option1'></label>
-                           / <input type='text' class='none' id='option2' size='6'  readonly onfocus="this.blur()">
-                           <label for='option2'></label>
-                           </td>
-                           <td style="vertical-align: bottom">
-                               <input type='hidden' name='sell_price' value='30400'>
-                               <input type='text' name='amount' value='1' size='1' style='outline: 0;' onchange='change();'>
-                               <input type='button' value="+" onclick="add();">
-                               <input type='button' value='-'
-                               onclick='del();'>
-                           </td>
-                       </tr>
-                       <tr>
-                           <td colspan='5' style='text-align: right'>
-                               \<input type='text' class='none' name='sum' size='11' value="" 
-                               style='font-weight: bold; font-size: 15px; text-align: right;'
-                               readonly onfocus="this.blur()">
-                           </td>
-                       </tr>
-                   </table>
-                   <div class='buy_btn'>
-                       <input type="button" class='btn1' name='cart_in' id='cart_in'>
-                       <label for='cart_in'>장바구니에넣기</label>
-                       <input type="button" class='btn1' name='buy_now' id='buy_now'>
-                       <label for='buy_now'>바로구매하기</label>
-                   </div>
-               </form>
-                
-            </div>
+        <div class='buy'>
+            <form name='form' method='get'>
+                <table>
+                    <tr>
+                        <td style="vertical-align: bottom"><span>프로필사진 GET! 시밀러룩 DAY!</span><br><br>
+                            - <input type='text' class='none' id='option1' size='5' readonly onfocus="this.blur()">
+                            <label for='option1'></label>
+                            / <input type='text' class='none' id='option2' size='6' readonly onfocus="this.blur()">
+                            <label for='option2'></label>
+                        </td>
+                        <td style="vertical-align: bottom">
+                            <input type='hidden' name='sell_price' value='30400'>
+                            <input type='text' name='amount' value='1' size='1' style='outline: 0;' onchange='change();'>
+                            <input type='button' value="+" onclick="add();">
+                            <input type='button' value='-' onclick='del();'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='5' style='text-align: right'>
+                            \<input type='text' class='none' name='sum' size='11' value="" style='font-weight: bold; font-size: 15px; text-align: right;' readonly onfocus="this.blur()">
+                        </td>
+                    </tr>
+                </table>
+                <div class='buy_btn'>
+                    <input type="button" class='btn1' name='cart_in' id='cart_in'>
+                    <label for='cart_in'>장바구니에넣기</label>
+                    <input type="button" class='btn1' name='buy_now' id='buy_now'>
+                    <label for='buy_now'>바로구매하기</label>
+                </div>
+            </form>
+
         </div>
+    </div>
     <div class='boxC'>
         <img src='img/recommend.png' alt='' width='600'>
     </div>
     <div class='boxD'>
-       <div class='go_left'>
-           <i class="fas fa-chevron-left"></i>
-       </div>
+        <div class='go_left'>
+            <i class="fas fa-chevron-left"></i>
+        </div>
         <div class='recommend_item'>
             <ul class='item'>
                 <li class='view'><a href='#'><img src="img/bannerimg3.jpg"></a></li>
@@ -320,12 +323,12 @@
         </div>
     </div>
     <div class='boxE'>
-        <div class='detail_nav'>
+        <div class='detail_nav nav'>
             <ul>
-                <li><a href='#' class='active'>상품상세정보</a></li>
-                <li><a href='#'>배송/교환/환불</a></li>
-                <li><a href='#'>상품구매후기</a></li>
-                <li><a href='#'>상품문의</a></li>
+                <li><a class='tab_1 active'>상품상세정보</a></li>
+                <li><a class='tab_2'>배송/교환/환불</a></li>
+                <li><a class='tab_3'>상품구매후기</a></li>
+                <li><a class='tab_4'>상품문의</a></li>
             </ul>
         </div>
     </div>
@@ -349,16 +352,159 @@
             <h1>위트 있는 무늬로 소장 욕구 폭발!</h1>
             <h2>쉽고 간편하게<br>멋내기 좋은 블라우스</h2>
             <p>지금부터 착용하기 좋고<br>
-            <span>더욱 탄탄한 핏을 완성</span>해주며<br>
-            꾸안꾸 스타일을 뽐낼 수 있는 시밀러룩이에요.</p>
+                <span>더욱 탄탄한 핏을 완성</span>해주며<br>
+                꾸안꾸 스타일을 뽐낼 수 있는 시밀러룩이에요.</p>
         </div>
         <div class='content_second' style='text-align: center'>
             <img src="img/detail5_1.jpg" alt=''>
             <img src="img/design.png" alt=''>
+            <img src='img/design1.png' alt=''>
         </div>
     </div>
-    <div class='boxH'></div>
-
+    <div class='boxH'>
+        <div class='delivery_nav nav'>
+            <ul>
+                <li><a class='tab_1'>상품상세정보</a></li>
+                <li><a class='tab_2 active'>배송/교환/환불</a></li>
+                <li><a class='tab_3'>상품구매후기</a></li>
+                <li><a class='tab_4'>상품문의</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class='boxI'>
+        <div class='delivery_notice'>
+            <h5><span>></span>배송안내</h5>
+            <ul class='notice_list'>
+                <li>
+                    <p>-맆블리는 우체국 택배와 배송대행 계약이 체결되어 있습니다.</p>
+                </li>
+                <li>
+                    <p>-50,000원 이상 결제 시 배송비 (2,000원)는 무료입니다.</p>
+                </li>
+                <li>
+                    <p>-결제일을 기준으로 평균 2~4일 이내에 상품이 준비되어 발송되며, (일, 공휴일 제외) 주문 폭주로 재고가 충분치 않은 경우 시간이 조금 더 걸릴 수 있는 점 양해 부탁드립니다.</p>
+                </li>
+                <li>
+                    <p>-수제화와 제작 액세서리의 경우, 7일~ 최대 약 2주의 제작 기간이 소요될 수 있습니다.</p>
+                </li>
+                <li>
+                    <p>-예약 주문 상품의 경우 네이버 페이를 통해 구매 시 배송이 지연될 수 있습니다.</p>
+                </li>
+            </ul>
+        </div>
+        <div class='delivery_notice'>
+            <h5><span>></span>확인해 주세요!</h5>
+            <ul class='notice_list'>
+                <li>
+                    <p>-제품의 색상은 모니터 설정 및 환경에 따라 약간씩 차이가 있을 수 있습니다.</p>
+                </li>
+                <li>
+                    <p>-워싱 된 제품이나 데미지, 전체적으로 프린트 무늬가 들어간 원단의 경우, 워싱 위피나 데미지 모양,무늬 등이 약간씩 다를 수 있습니다.</p>
+                </li>
+                <li>
+                    <p>-데님 소재 및 컬러감이 강한 의류의 경유 밝은 소재(의류,가방,슈즈)와 함께 착용시 이염 가능성이 있을 수 있으니 주의하여 주세요.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class='boxJ'>
+        <div class='review_nav nav'>
+            <ul>
+                <li><a class='tab_1'>상품상세정보</a></li>
+                <li><a class='tab_2'>배송/교환/환불</a></li>
+                <li><a class='tab_3 active'>상품구매후기</a></li>
+                <li><a class='tab_4'>상품문의</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class='boxK'>
+        <div class='notice_board'>
+            <form>
+                <input type='button' name='writing' value='후기게시판'>
+                <textarea class='note'>본 게시판은 상품후기 게시판입니다. 문의글은 Q&A 게시판에서만 답변이 가능합니다. 리뷰 삭제 시에는 지급된 적립금이 회수될 수 있습니다.
+리뷰 작성 시 이메일, 휴대혼 번호 등 개인정보 작성 및 이미지 노출은 금지되어 있으며 발견 즉시 사전 통보 없이 삭제 됩니다.
+또한 이로 인해 발생하는 모든 피해에 대해 맆블리는 책임 지지 않습니다. 이점 유의하여 작성해 주시기 바랍니다.</textarea>
+                <input type='file' id='file'>
+                <label for='file'><i class="fas fa-camera"></i>사진추가</label>
+                <div class='star_label'>
+                   <input type='text' name='select_input' class='select_input' onfocus='this.blur()' readonly>
+                    <div class='down'>
+                        <i class="fas fa-caret-square-down"></i>
+                    </div>
+                    
+                    <ul class='star_label_ul'>
+                        <li value="5">
+                            <div class='select_item'>
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <span class='text'>아주 좋아요</span>
+                            </div>
+                        </li>
+                        <li value="4">
+                            <div class='select_item'>
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star_empty.png">
+                                <span class='text'>맘에 들어요</span>
+                            </div>
+                        </li>
+                        <li value="3">
+                            <div class='select_item'>
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star_empty.png">
+                                <img src="img/star_empty.png">
+                                <span class='text'>보통이에요</span>
+                            </div>
+                        </li>
+                        <li value="2">
+                            <div class='select_item'>
+                                <img src="img/star.png">
+                                <img src="img/star.png">
+                                <img src="img/star_empty.png">
+                                <img src="img/star_empty.png">
+                                <img src="img/star_empty.png">
+                                <span class='text'>그저 그래요</span>
+                            </div>
+                        </li>
+                        <li value="1">
+                            <div class='select_item'>
+                                <img src="img/star.png">
+                                <img src="img/star_empty.png">
+                                <img src="img/star_empty.png">
+                                <img src="img/star_empty.png">
+                                <img src="img/star_empty.png">
+                                <span class='text'>별로에요</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <input type='submit' value="리뷰 등록하기">
+            </form>
+        </div>
+    </div>
+    <div class='boxL'>
+        <div class='qna_nav nav'>
+            <ul>
+                <li><a class='tab_1'>상품상세정보</a></li>
+                <li><a class='tab_2'>배송/교환/환불</a></li>
+                <li><a class='tab_3'>상품구매후기</a></li>
+                <li><a class='tab_4 active'>상품문의</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class='boxM'>
+        <div class='qna'>
+            <h4>Q&A</h4>
+            <p>궁굼한 점을 남겨주세요. 확인 후 빠르게 답변해 드리겠습니다.</p>
+        </div>
+    </div>
     <div class='box8'>
         <div class='box8_inner'>
             <div class='box8_1'>
@@ -409,6 +555,4 @@
         <a href="#"><i class="fas fa-chevron-up"></i></a>
         <a id='down'><i class="fas fa-chevron-down"></i></a>
     </div>
-</body>
-
-</html>
+</body></html>
