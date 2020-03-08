@@ -447,22 +447,26 @@ a{text-decoration: none;}
 .star_label_ul{
     background-color: rgba(255,255,255,1);
     border:solid 0.5px #eeeeee;
-    z-index: 2px;
+    z-index: 4;
     position: absolute;
     top:30px;
     padding:0 5px;
 }
-.select_input{
+input[id=select_input]+label{
     height: 28px;
     display: inline-block;
     width:370px;
     border:none;
     outline: 0;
 }
+input[id=select_input]{
+    display: none;
+}
 .select_item{
     height: 30px;
     line-height: 30px;
     padding-left: 10px;
+    cursor: pointer;
 }
 .select_item span{
     font-size: 13px;
@@ -474,15 +478,15 @@ a{text-decoration: none;}
     vertical-align: middle;
     
 }
-.star_label_ul li.onview{
+.select_item.onview{
     display: block;
 }
-.star_label_ul li{
+.select_item{
     display: none;
     width:370px;
    
 }
-.star_label_ul li:hover{
+.select_item:hover{
     background-color: #eeeeee;
 }
 .down{
@@ -573,4 +577,102 @@ textarea.note{
 }
 .boxM{
     height: 200px;
+}
+.score_A:after{
+    display: block;
+    clear: both;
+    content:'';
+}
+.score_A{
+    width:700px;
+    height: 180px;
+    border:solid 1px #dddddd;
+    margin-top:20px;
+}
+.average{
+    float: left;
+    width:30%;
+    height: 180px;
+    text-align: center;
+    padding-top:10px;
+}
+.average h3{
+    color:gray;
+    font-weight: normal;
+    font-size: 15px;
+    padding:5px 0;
+}
+input[name=people]{
+    display: inline-block;
+    width:50px;
+    margin-left: 5px;
+    border:none;
+}
+.chart{
+   float: left;
+    width:70%;
+    height: 180px;
+}
+input[id=ave]{
+    display: none;
+}
+input[id=ave]+label{
+    color:#fff;
+    font-size: 35px;
+    display:inline-block;
+    width:140px;
+    height: 90px;
+    line-height: 90px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 2px;
+    margin-top:10px;
+}
+
+.chart{
+    text-align: center;
+    padding-top:15px;
+}
+.data_score_star{
+    display: inline-block;
+}
+.score_number{
+    float: left;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.domain_all{
+    float: left;
+    width:350px;
+    height: 20px;
+    background-color: #eeeeee;
+    display: inline-block;
+    position: relative;
+}
+.dimain_point{
+    position: absolute;
+    z-index: 1;
+    background-color:darkorange;
+    height: 20px;
+    width:auto;
+    left: 0;
+}
+input[name=personnel]{
+    float: left;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 20px;
+    width:45px;
+    border:none;
+    color:gray;
+}
+.data_score_filters{
+    height: 30px;
+    display: block;
+}
+
+.data_score_filters:after{
+    clear: both;
+    display: block;
+    content:'';
 }

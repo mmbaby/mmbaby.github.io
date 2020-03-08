@@ -427,65 +427,124 @@
                 <input type='file' id='file'>
                 <label for='file'><i class="fas fa-camera"></i>사진추가</label>
                 <div class='star_label'>
-                   <input type='text' name='select_input' class='select_input' onfocus='this.blur()' readonly>
+                    <input type='text' name='select_input' id='select_input'><label for='select_input' id='select_input_label'></label>
                     <div class='down'>
                         <i class="fas fa-caret-square-down"></i>
                     </div>
-                    
+
                     <ul class='star_label_ul'>
-                        <li value="5">
-                            <div class='select_item'>
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <span class='text'>아주 좋아요</span>
-                            </div>
+                        <li class='select_item' data_score='5'>
+
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <span class='text'>아주 좋아요</span>
+
                         </li>
-                        <li value="4">
-                            <div class='select_item'>
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star_empty.png">
-                                <span class='text'>맘에 들어요</span>
-                            </div>
+                        <li class='select_item' data_score='4'>
+
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star_empty.png">
+                            <span class='text'>맘에 들어요</span>
+
                         </li>
-                        <li value="3">
-                            <div class='select_item'>
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star_empty.png">
-                                <img src="img/star_empty.png">
-                                <span class='text'>보통이에요</span>
-                            </div>
+                        <li class='select_item' data_score='3'>
+
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star_empty.png">
+                            <img src="img/star_empty.png">
+                            <span class='text'>보통이에요</span>
+
                         </li>
-                        <li value="2">
-                            <div class='select_item'>
-                                <img src="img/star.png">
-                                <img src="img/star.png">
-                                <img src="img/star_empty.png">
-                                <img src="img/star_empty.png">
-                                <img src="img/star_empty.png">
-                                <span class='text'>그저 그래요</span>
-                            </div>
+                        <li class='select_item' data_score='2'>
+
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star_empty.png">
+                            <img src="img/star_empty.png">
+                            <img src="img/star_empty.png">
+                            <span class='text'>그저 그래요</span>
+
                         </li>
-                        <li value="1">
-                            <div class='select_item'>
-                                <img src="img/star.png">
-                                <img src="img/star_empty.png">
-                                <img src="img/star_empty.png">
-                                <img src="img/star_empty.png">
-                                <img src="img/star_empty.png">
-                                <span class='text'>별로에요</span>
-                            </div>
+                        <li class='select_item' data_score='1'>
+
+                            <img src="img/star.png">
+                            <img src="img/star_empty.png">
+                            <img src="img/star_empty.png">
+                            <img src="img/star_empty.png">
+                            <img src="img/star_empty.png">
+                            <span class='text'>별로에요</span>
+
                         </li>
                     </ul>
                 </div>
                 <input type='submit' value="리뷰 등록하기">
+                <div class='score_A'>
+                    <div class='average'>
+                        <h3>리뷰 평점<input type='text' name='people' readonly onfocus="this.blur()" style='text-align: center'>명</h3>
+                        
+                        <input type='text' name='ave' id='ave' value="" readonly onfocus="this.blur()">
+                        <label for='ave' id='ave_input'></label>
+                        
+                    </div>
+
+                    <div class='chart'>
+                        <ul class='data_score_star'>
+                            <li class='data_score_filters' value='5'>
+                                <!--                              1-->
+                                <div class='score_number'>5 stars</div>
+                                <!--                               2-->
+                                <div class='domain_all'>
+                                    <div class='dimain_point' id='percent_5'></div>
+                                </div>
+                                <!--                               3-->
+                                <input type='text' id='personnel_5' name='personnel' value='30' readonly onfocus="this.blur()" style='text-align: center'>
+
+                            </li>
+                            <li class='data_score_filters' value='4'>
+                                <div class='score_number'>4 stars</div>
+                                <div class='domain_all'>
+                                    <div class='dimain_point' id='percent_4'></div>
+                                </div>
+                                <input type='text' id='personnel_4' name='personnel' value='25' readonly onfocus="this.blur()" style='text-align: center'>
+                                
+                            </li>
+                            <li class='data_score_filters' value='3'>
+                                <div class='score_number'>3 stars</div>
+                                <div class='domain_all'>
+                                    <div class='dimain_point' id='percent_3'></div>
+                                </div>
+                                <input type='text' id='personnel_3' name='personnel' value='10' readonly onfocus="this.blur()" style='text-align: center'>
+                               
+                            </li>
+                            <li class='data_score_filters' value='2'>
+                                <div class='score_number'>2 stars</div>
+                                <div class='domain_all'>
+                                    <div class='dimain_point' id='percent_2'></div>
+                                </div>
+                                <input type='text' id='personnel_2' name='personnel' value='10' readonly onfocus="this.blur()" style='text-align: center'>
+                                
+                            </li>
+                            <li class='data_score_filters' value='1'>
+                                <div class='score_number'>1 stars</div>
+                                <div class='domain_all'>
+                                    <div class='dimain_point' id='percent_1'></div>
+                                </div>
+                                <input type='text' id='personnel_1' name='personnel' value='0' readonly onfocus="this.blur()" style='text-align: center'>
+                                
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
             </form>
         </div>
     </div>
@@ -555,4 +614,6 @@
         <a href="#"><i class="fas fa-chevron-up"></i></a>
         <a id='down'><i class="fas fa-chevron-down"></i></a>
     </div>
-</body></html>
+</body>
+
+</html>
