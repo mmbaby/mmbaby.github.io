@@ -48,6 +48,8 @@ $(function () {
             'display': 'inline-block',
             'vertical-align': 'middle'
         });
+        
+
 
     });
 
@@ -210,6 +212,13 @@ $(function () {
     var result=multi/sum;
     
     $('#ave_input').text(result.toFixed(1));
+    
+    $('input[id=cart_in]+label').click(function(){
+          $('.cart_pop').addClass('block'); 
+       });
+        $('#close').click(function(){
+          $('.cart_pop').removeClass('block'); 
+       });
 });
 
 

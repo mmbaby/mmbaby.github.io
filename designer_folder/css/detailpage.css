@@ -676,3 +676,85 @@ input[name=personnel]{
     display: block;
     content:'';
 }
+.cart_pop{
+    display: none;
+}
+.cart_pop.block{
+    display: block;
+    position:fixed;
+    z-index: 50;
+    top:20%;
+    left: 30%;
+    border:solid 1px #8891a0;
+    width:450px;
+    height: 350px;
+}
+.pop_header{
+    height: 30px;
+    background-color: #8891a0;
+    line-height: 30px;
+    font-size: 20px;
+}
+.pop_header h5{
+    display: inline-block;
+    float: left;
+    color:#fff;
+    padding-left: 20px;
+}
+.pop_header i{
+    display: inline-block;
+    float: right;
+    color:#fff;
+    line-height: 30px;
+    padding-right: 20px;
+}
+.pop_header:after{
+    clear: both;
+    display: block;
+    content:'';
+}
+.pop_content{
+    background-color: #fff;
+    text-align: center;
+    height: 270px;
+}
+.pop_content i{
+    font-size: 50px;
+    border:solid 7px #dddddd;
+    border-radius: 50%;
+    padding:30px;
+    color:#f95d6a;
+    display: inline-block;
+    margin-top:54px;
+}
+.pop_content p{
+    margin-top:10px;
+    font-size: 14px;
+    color:#515e69;
+    font-weight: bolder;
+}
+.pop_footer{
+    text-align: center;
+    border-top:solid 1px #dddddd;
+    height: 50px;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+}
+.pop_footer input[name=cart]{
+    width:100px;
+    height: 30px;
+    border-radius: 5px;
+    margin:10px 5px 0 10px;
+    cursor: pointer;
+    outline: 0;
+}
+.pop_footer input[class=go_cart]{
+    background-color: #7994aa;
+    color:#fff;
+    border:none;
+}
+.pop_footer input[class=no_cart]{
+    background-color: #fff;
+    color:#000;
+    border:solid 0.5px #7994aa;
+}

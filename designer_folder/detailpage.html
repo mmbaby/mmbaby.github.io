@@ -281,12 +281,28 @@
                 </table>
                 <div class='buy_btn'>
                     <input type="button" class='btn1' name='cart_in' id='cart_in'>
-                    <label for='cart_in'>장바구니에넣기</label>
+                    <label for='cart_in' id='cart_in_label'>장바구니에넣기</label>
                     <input type="button" class='btn1' name='buy_now' id='buy_now'>
                     <label for='buy_now'>바로구매하기</label>
                 </div>
-            </form>
 
+                <div class='cart_pop'>
+                    <div class='pop_header'>
+                        <h5>장바구니 담기</h5>
+                        <i id='close' class="fas fa-times"></i>
+                    </div>
+                    <div class='pop_content'>
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <p>장바구니에 상품이 정상적으로 담겼습니다.</p>
+                    </div>
+                    <div class='pop_footer'>
+                        <input type='button' name='cart' class='go_cart' value='장바구니 이동'>
+                        
+                        <input type='button' name='cart' class='no_cart' value='쇼핑 계속하기'>
+                    
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <div class='boxC'>
@@ -489,10 +505,10 @@
                 <div class='score_A'>
                     <div class='average'>
                         <h3>리뷰 평점<input type='text' name='people' readonly onfocus="this.blur()" style='text-align: center'>명</h3>
-                        
+
                         <input type='text' name='ave' id='ave' value="" readonly onfocus="this.blur()">
                         <label for='ave' id='ave_input'></label>
-                        
+
                     </div>
 
                     <div class='chart'>
@@ -514,7 +530,7 @@
                                     <div class='dimain_point' id='percent_4'></div>
                                 </div>
                                 <input type='text' id='personnel_4' name='personnel' value='25' readonly onfocus="this.blur()" style='text-align: center'>
-                                
+
                             </li>
                             <li class='data_score_filters' value='3'>
                                 <div class='score_number'>3 stars</div>
@@ -522,7 +538,7 @@
                                     <div class='dimain_point' id='percent_3'></div>
                                 </div>
                                 <input type='text' id='personnel_3' name='personnel' value='10' readonly onfocus="this.blur()" style='text-align: center'>
-                               
+
                             </li>
                             <li class='data_score_filters' value='2'>
                                 <div class='score_number'>2 stars</div>
@@ -530,7 +546,7 @@
                                     <div class='dimain_point' id='percent_2'></div>
                                 </div>
                                 <input type='text' id='personnel_2' name='personnel' value='10' readonly onfocus="this.blur()" style='text-align: center'>
-                                
+
                             </li>
                             <li class='data_score_filters' value='1'>
                                 <div class='score_number'>1 stars</div>
@@ -538,7 +554,7 @@
                                     <div class='dimain_point' id='percent_1'></div>
                                 </div>
                                 <input type='text' id='personnel_1' name='personnel' value='0' readonly onfocus="this.blur()" style='text-align: center'>
-                                
+
                             </li>
                         </ul>
                     </div>
