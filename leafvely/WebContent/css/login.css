@@ -55,10 +55,10 @@ input[type=checkbox]:checked+label:before{
     text-align: center;
     margin-bottom: 150px;
 }
-.login_btn input{
+.login_btn input[type=button]{
 	display:none;
 }
-.login_btn input+label{
+.login_btn input[type=button]+label{
 	display:inline-block;
 	font-size:14px;
 	outline:0;
@@ -73,6 +73,6 @@ input[type=checkbox]:checked+label:before{
     border-radius: 2px;
     cursor: pointer;
 }
-.login_btn input:hover+label{
+.login_btn input[type=button]:hover+label{
     opacity: 0.8;
 }
