@@ -17,13 +17,6 @@ $(function () {
             alert('PW 를 입력해주세요');
             $('input[id=pwresult]').focus();
         }
-    });
-    
-    //엔터키 막기
-    $('input').keydown(function () {
-        if (event.keyCode === 13) {
-            event.preventDefault();
-        }
-    });
+    })
 
 });
