@@ -139,17 +139,14 @@ a {
     vertical-align: bottom;
     padding-right: 50px;
 }
-
-.box4 {
+.box4{
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 10;
     display: none;
 }
-
 .fixed {
-    width: 100%;
     background-color: #f8ecde;
 }
 
@@ -184,6 +181,7 @@ a {
 }
 
 /*quick*/
+
 .quick {
     text-align: center;
     margin: 0 auto;
@@ -244,12 +242,6 @@ a {
     width: 100%;
     margin-top: 100px;
 }
-
-.banner img {
-    width: 320px;
-    box-sizing: border-box;
-}
-
 /*contents*/
 .box7 {
     margin-top: 200px;
@@ -294,7 +286,7 @@ a {
     left: -300px;
     width: 280px;
     height: 100%;
-    z-index: 100;
+    z-index: 101;
     top: 0;
     transition: all 0.4s;
     background-color: #fff;
@@ -304,11 +296,13 @@ a {
 .sidebar.active {
     left: 0;
 }
+
 .overlay {
-    z-index: 99;
+    z-index: 100;
     position: fixed;
     width: 100%;
     height: 100%;
+    top: 0;
     background: rgba(0, 0, 0, 0.6);
     display: none;
 }
@@ -331,16 +325,37 @@ a {
     display: block;
     line-height: 50px;
 }
-
+.bookmarkCategory h2 i{
+    padding-right: 15px;
+}
 .bookmarkCategory h2 {
     font-size: 13px;
     color: #bbbbbb;
-   border-bottom: solid 1px #dddddd;
+    border-bottom: solid 1px #dddddd;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
 }
-.bookmarkCategory h2:after{
+
+.bookmarkCategory h2:after {
     display: block;
     clear: both;
-    content:'';
+    content: '';
+}
+.bookmarkCategory span{
+    display: block;
+    font-size: 11px;
+    font-weight: lighter;
+    background-color: #eeeeee;
+    color:gray;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #dddddd;
+}
+.bookmarkCategory span i{
+    color:indianred;
 }
 input[id=icoCategory] {
     display: none;
@@ -349,4 +364,54 @@ input[id=icoCategory] {
 input[id=icoCategory] + label {
     color: #a7a7a7;
     float: right;
+}
+.sidefooter{
+    height: 100px;
+    background-color: #dddddd;
+    text-align: center;
+}
+.sidefooter h5{
+    padding-top:20px;
+    padding-bottom: 5px;
+}
+.sidefooter strong{
+    float: left;
+    width:50%;
+    color:gray;
+}
+.sidefooter p{
+    float: left;
+    width:50%;
+    font-size: 13px;
+}
+.sidefooter:after{
+    clear: both;
+    display: block;
+    content:'';
+}
+.itembox{
+    text-align: center;
+}
+.itembox li{
+    width:50%;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+    border: solid 1px #dddddd;
+    box-sizing: border-box;
+}
+.bookmarkCategory p i{
+    font-size: 10px;
+    color:#a7a7a7;
+    padding-right: 5px;
+}
+.bookmarkCategory p{
+    font-size: 13px;
+    font-weight: lighter;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: solid 1px #dddddd;
+    color:gray;
+    padding-left: 10px;
 }
